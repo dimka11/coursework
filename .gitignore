@@ -1,5 +1,6 @@
 WorldWeatherOnline/data
 HTMLCSV/Gismeteo/data
 HTMLCSV/ogimet/data
-
+HTMLCSV/ogimet/new_data
+*.csv
 .idea
