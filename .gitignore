@@ -2,6 +2,7 @@ WorldWeatherOnline/data
 HTMLCSV/Gismeteo/data
 HTMLCSV/ogimet/data
 HTMLCSV/ogimet/new_data
+triangle_ogimet/data
 *.csv
 .idea
 RP5/data
