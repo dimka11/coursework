@@ -1,0 +1,1487 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+<HEAD>
+<TITLE>Synop report summary</TITLE>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="Author" content="G. Ballester Valor">
+<meta name="robots" content="noindex,nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="synop, synop ship, weather reports, WMO indexes, temperature, dewpoint, heat index, wind chill, precipitation,wind, relative humidity, maximum temperature, minimum temperature, sea level pressure, daily weather report">
+<link rel="stylesheet" href="/ogimet.css">
+<link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css" />
+<script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>
+<script>
+window.addEventListener("load", function(){
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "#eb6c44",
+      "text": "#ffffff"
+    },
+    "button": {
+      "background": "#f5d948"
+    }
+  },
+  "theme": "classic",
+  "position": "top",
+  "content": {
+    "message": "We use cookies to personalise content and ads, to provide social media features and to analyse our traffic. We also share information about your use of our site with our social media, advertising and analytics partners who may combine it with other information youâve provided to them or theyâve collected from your use of their services. If you navigate in these pages we assume you accept its use.",
+    "dismiss": "Got it!",
+    "link": "Learn more",
+    "href": "/cookiespolicy.phtml.en"
+  }
+})});
+</script>
+</HEAD>
+<BODY bgcolor="FFFFDD">
+<div id="overDiv" style="position:absolute; visibility:hidden; z-index:1000;"></div>
+<script type="text/javascript" src="../overlib/overlib.js"><!-- overLIB (c) Erik Bosrup --></script>
+<!-- Comienza el armazon del prologo -->
+<!-- <div id="overlay_cookie">
+     <center><table width="80%"><tr><td>This site uses third part cookies. If you navigate in these pages we assume you accept its use.</td>
+     <td><a href="/cookiespolicy.phtml">Learn more</a></td>
+     <td align="left"><button id="button_cookie" onclick="msgOff()">Got it!</button>
+     </td></tr></table>
+</center>
+</div> -->
+<table width="100%" border=1 cellspacing="0" cellpadding="5" summary="skeleton of Ogimet pages">
+ <TR>
+  <TD class="zona_izquierda" bgcolor="#DDDDBB" align="center">
+   <DIV><font color="#203090">Professional information about meteorological conditions in the world</font></DIV>
+  </TD>
+  <TD class="zona_centro" align="center" bgcolor="#FFFFDD">
+   <img src="/img/ogimet.jpg" alt="OGIMET" style="max-width: 100%">
+   <!--h1><font color="#A03030">OGIMET</font></h1-->
+<div width="100%">
+     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+     <!-- Superior mÃ³viles -->
+     <ins class="adsbygoogle adslot_1"
+       data-ad-client="ca-pub-8560276470047907"
+       data-ad-slot="6634681731"
+       data-ad-format="horizontal"></ins>
+     <script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+     </script>
+</div>
+  </TD>
+  <!-- barra de publicidad -->
+  <TD class="zona_derecha" align="center" valign="top" rowspan="2" bgcolor="#FFFFEE">
+<!-- adsense google -->
+     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Derecha adaptable 1 -->
+<ins class="adsbygoogle adslot_2"
+     data-ad-client="ca-pub-8560276470047907"
+     data-ad-slot="6597655730"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<hr size="1">
+<!-- Derecha adaptable 2 -->
+     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle adslot_2"
+     data-ad-client="ca-pub-8560276470047907"
+     data-ad-slot="4562519331"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+  </TD>
+</TR>
+<TR>
+<!--barra izquierda-->
+<TD align="center" valign="top" bgcolor="#FFFFDD">
+<h2><FONT color="#F05050"><A href="/home.phtml.en">OGIMET</A></FONT></h2>
+<h5><FONT color="#F05050"><A href="/index.phtml">Versi&#243;n espa&#241;ola</A></FONT></h5>
+<hr size="1">
+
+<div><FONT color="#30A050" size="-1"><STRONG>METEOSAT</STRONG></FONT></div>
+<div><a href="/cgi-bin/gmsat2?lang=en">
+<IMG src="/mapabase/geos/bluem/latest-mpe_ir_s.jpg" alt="Latest meteosat / metar" 
+title="Latest meteosat-9 / metar" border="0" style="max-width=100%" ><br><b>M</b>eteosat-9/metar</a></div>
+<div><A href="/loopir2d2.phtml?lang=en"><b>M</b>eteosat-9 VIS-IR loop</A></div>
+<hr size="1">
+<div><FONT color="#30A050" size="-1"><STRONG>WEATHER MODEL FORECAST</STRONG></FONT></div>
+<div><A href="/tabla_pred.phtml?lang=en"><IMG src="/tmp/gfsmodel.gif" alt="GFS Maps" border="0" style="max-width=100%">
+<br><b>G</b>FS world weather maps</A></div>
+<hr size="1">
+
+<div><FONT color="#30A050" size="-1"><STRONG>METEOGRAMS</STRONG></FONT></div>
+<div><A href="/gramet_aero.phtml.en"><b>G</b>ramet <b>a</b>ero</A></div>
+<div><A href="/gramet_meteo.phtml.en"><b>G</b>ramet <b>m</b>eteo</A></div>
+<hr size="1">
+
+<div><FONT color="#30A050" size="-1"><STRONG>INDEXES</STRONG></FONT></div>
+<div><A href="/indicativos.phtml.en"><b>Q</b>uery about indexes</A></div>
+<hr size="1">
+
+<div><FONT color="#30A050" size="-1"><STRONG>UNDECODED REPORTS</STRONG></FONT></div>
+<div><A href="/synops.phtml.en"><b>S</b>ynop reports</A></div>
+<div><A href="/synopsc.phtml.en"><b>S</b>ynop by countries</A></div>
+<div><A href="/usynops.phtml.en"><b>L</b>atest synops</A></div>
+<div><A href="/metars.phtml.en"><b>M</b>etar/Taf reports</A></div>
+<div><A href="/umetars.phtml.en"><b>L</b>atest metar</A></div>
+<div><A href="/utafs.phtml.en"><b>L</b>atest Taf</A></div>
+<div><A href="/sond.phtml.en"><b>U</b>pper air soundings</A></div>
+<div><A href="/sondc.phtml.en"><b>S</b>oundings by countries</A></div>
+<hr size="1">
+
+<div><FONT color="#30A050" size="-1"><STRONG>TEXT INFORMATION</STRONG></FONT></div>
+<div><A href="/gsynres.phtml.en"><b>D</b>aily summaries</A></div>
+<div><A href="/resynops.phtml.en"><b>C</b>ountry summaries</A></div>
+<div><A href="/ranking.phtml.en"><b>W</b>eather ranking</A></div>
+<div><A href="/gsodc.phtml.en"><b>G</b>SOD Daily summaries</A></div>
+<div><A href="/gclimat.phtml.en"><b>C</b>LIMAT monthly summaries</A></div>
+<hr size="1">
+
+<div><FONT color="#30A050" size="-1"><STRONG>BUFR REPORTS</STRONG></FONT></div>
+<div><A href="/bufr.phtml.en"><b>G</b>et <b>B</b>ufr reports</A></div>
+<hr size="1">
+
+<div><FONT color="#30A050" size="-1"><STRONG>GRAPHIC INFORMATION</STRONG></FONT></div>
+<div><A href="/cgi-bin/ogimet_nav?lang=en"><b>O</b>penmaps data navigation</A></div>
+<div><A href="/gsynop.phtml.en"><b>S</b>ynops over countries</A></div>
+<div><A href="/gsynop_nav.phtml.en"><b>W</b>orld synop navigation</A></div>
+<div><A href="/gmetar.phtml.en"><b>M</b>etars over countries</A></div>
+<div><A href="/gmetar_nav.phtml.en"><b>W</b>orld metar navigation</A></div>
+<div><A href="/gsod_nav.phtml.en"><b>W</b>orld GSOD data navigation</A></div>
+<hr size="1">
+
+<div><FONT color="#30A050" size="-1"><STRONG>OTHER</STRONG></FONT></div>
+<div><A href="/cgi-bin/count_reports?lang=en"><b>D</b>atabase state</A></div>
+<div><A href="/credits.phtml"><b>C</b>redits</A></div>
+<div><A href="/license.phtml"><b>L</b>icense</A></div>
+<div><A href="/news.phtml"><b>O</b>gimet news</A></div>
+<div><A href="http://www.nws.noaa.gov/im/wmocovr.htm"><b>W</b>MO Resolution 40</A></div>
+<div><A href="/guia.phtml.en"><b>D</b>ocumentation</A></div>
+<div><A href="mailto:webmasterREM0VE@ogimet.com"><b>C</b>ontact</A></div>
+<hr size="1">
+<b>Advertisements</b>
+<hr size="1">
+<div><a href="http://www.meteored.com" title="Dedicated server supported by tiempo.com">
+<img src="/img/tiempo.svg" border="0" style="max-width=100%" ></a></div>
+<!-- fin de barra izquierda -->
+</TD>
+<TD valign="top">
+<!--nucleo, fin del prologo -->
+<TABLE border=2 align="center">
+<TR><TD align="center" bgcolor="#FFC0C0">
+<h3><FONT color="#C05050">28698</font>:&nbsp;&nbsp; Omsk (Russia)</h3>
+<h4>Latitude: <FONT color="#505090">55-01-00N</FONT> &nbsp;&nbsp; Longitude: <FONT color="#505090">073-23-00E</FONT> &nbsp;&nbsp; Altitude: <FONT color="#50A050">122</FONT> m.</h4>
+</TD></TR>
+</TABLE>
+<br><br>
+<TABLE align="center" border=0 cellspacing=1 bgcolor='#d0d0d0'>
+<CAPTION> Daily summary at <font color="#030509"><b>06:00 UTC</b></font>. (10:53 mean solar time)<br>Time interval: <b>31</b> days before <b>2020/09/01</b></CAPTION>
+<THEAD>
+<TR>
+ <TH rowspan="2" bgcolor="#5ac05a">Date</TH>
+<TH colspan="3" bgcolor="#c05a9a"> Temperature<br>(C)</TH>
+ <TH rowspan="2" bgcolor="#a3a35a">Td<br>Avg<br>(C)</TH>
+ <TH rowspan="2" bgcolor="#a3a35a">Hr.<br>Avg<br>(%)</TH>
+<TH colspan="3" bgcolor="#c05a5a">Wind<br>(km/h)</TH>
+ <TH rowspan="2" bgcolor="#c05a5a">Pres.<br>s.lev<br>(Hp)</TH>
+ <TH rowspan="2" bgcolor="#0ac0a0">Prec.<br>(mm)</TH>
+<TH rowspan="2" bgcolor="#c781F1">Tot<br>Cl<br>Oct</TH>
+<TH rowspan="2" bgcolor="#c781F1">low<br>Cl<br>Oct</TH>
+<TH rowspan="2" bgcolor="#81F1C7">Sun<br>D-1<br>(h)</TH>
+<TH rowspan="2" bgcolor="#c05ac0">Vis<br>Km</TH>
+ <TH rowspan="2" colspan="8" bgcolor="#5ac05a">Daily<br>weather summary</TH>
+</TR>
+<TR>
+ <TH bgcolor="#c05a5a">Max</TH>
+ <TH bgcolor="#5a5ac0">Min</TH>
+ <TH bgcolor="#a3c35a">Avg</TH>
+ <TH bgcolor="#c05a5a">Dir.</TH>
+ <TH bgcolor="#c05a5a">Int.</TH>
+ <TH bgcolor="#c05a5a">Gust</TH>
+</TR>
+</THEAD>
+<TR>
+<TD bgcolor="#a0c0a0"><a HREF="/cgi-bin/gsynres?ind=28698&lang=en&decoded=yes&ndays=2&ano=2020&mes=09&day=01&hora=06" onmouseover="return overlib('Decoded synops since 48 before 09/01/2020 06 UTC');" onmouseout=" return nd();">09/01</a></TD>
+<TD align="right" bgcolor="#FF502F"><font color="#FFFFFF">31.4</font></TD>
+<TD align="right" bgcolor="#ECEB3C"><font color="#000000">18.6</font></TD>
+<TD align="right"  bgcolor="#FFB339"><font color="#000000">23.9</font></TD>
+<TD align="right"  bgcolor="#A0FF47"><font color="#000000">11.8</font></TD>
+<TD align="right"  bgcolor="#FFCD3C"><font color="#000000">50.7</font></TD>
+<TD align="center"  bgcolor="#a0a0c0"><font color="#000000">W</font></TD>
+<TD align="right"  bgcolor="#A0FF47"><font color="#000000">6.3</font></TD>
+<TD align="right"  bgcolor="#0AFFBE"><font color="#000000">36.0</font></TD>
+<TD align="right"  bgcolor="#ECEB3C"><font color="#000000">1012.4</font></TD>
+<TD align="right" bgcolor="#D5FF3C">Tr</TD>
+<TD align="right"  bgcolor="#D0D0F0"><font color="#000000">7.6</font></TD>
+<TD align="right"  bgcolor="#B0B0FF"><font color="#000000">4.4</font></TD>
+<TD align="right"  bgcolor="#FFFF90"><font color="#000000">10.7</font></TD>
+<TD align="right"  bgcolor="#6060FF"><font color="#FFFFFF">16.2</font></TD>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_nuboso.png" alt="sw_nuboso.png" onmouseover=" overlib('Broken. Daylight. At 08/31/2020 09:00 UTC (H - 21)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_cubierto.png" alt="sw_cubierto.png" onmouseover=" overlib('Overcast. Daylight. At 08/31/2020 12:00 UTC (H - 18)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_cubierto_noche.png" alt="sw_cubierto_noche.png" onmouseover=" overlib('Overcast. Night. At 08/31/2020 15:00 UTC (H - 15)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_cubierto_noche.png" alt="sw_cubierto_noche.png" onmouseover=" overlib('Overcast. Night. At 08/31/2020 18:00 UTC (H - 12)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_cubierto_noche.png" alt="sw_cubierto_noche.png" onmouseover=" overlib('Overcast. Night. At 08/31/2020 21:00 UTC (H - 09)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_cubierto_noche.png" alt="sw_cubierto_noche.png" onmouseover=" overlib('Overcast. Twilight. At 09/01/2020 00:00 UTC (H - 06)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_cubierto.png" alt="sw_cubierto.png" onmouseover=" overlib('Overcast. Daylight. At 09/01/2020 03:00 UTC (H - 03)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_cubierto.png" alt="sw_cubierto.png" onmouseover=" overlib('Overcast. Daylight. At 09/01/2020 06:00 UTC (H - 00)'); " onmouseout=" return nd();">
+</td>
+</TR>
+<TR>
+<TD bgcolor="#a0c0a0"><a HREF="/cgi-bin/gsynres?ind=28698&lang=en&decoded=yes&ndays=2&ano=2020&mes=08&day=31&hora=06" onmouseover="return overlib('Decoded synops since 48 before 08/31/2020 06 UTC');" onmouseout=" return nd();">08/31</a></TD>
+<TD align="right" bgcolor="#FF002D"><font color="#FFFFFF">31.7</font></TD>
+<TD align="right" bgcolor="#D5FF3C"><font color="#000000">13.7</font></TD>
+<TD align="right"  bgcolor="#FFCD3C"><font color="#000000">22.2</font></TD>
+<TD align="right"  bgcolor="#D5FF3C"><font color="#000000">13.4</font></TD>
+<TD align="right"  bgcolor="#A0FF47"><font color="#000000">62.4</font></TD>
+<TD align="center"  bgcolor="#a0a0c0"><font color="#000000">SSW</font></TD>
+<TD align="right"  bgcolor="#D5FF3C"><font color="#000000">2.7</font></TD>
+<TD align="right" bgcolor="#DDDDDD">----</TD>
+<TD align="right"  bgcolor="#A0FF47"><font color="#000000">1017.5</font></TD>
+<TD align="right" bgcolor="#FF8835"><font color="#000000">0.0</font></TD>
+<TD align="right"  bgcolor="#6060FF"><font color="#FFFFFF">1.6</font></TD>
+<TD align="right"  bgcolor="#6060FF"><font color="#FFFFFF">1.0</font></TD>
+<TD align="right"  bgcolor="#FFFF90"><font color="#000000">11.9</font></TD>
+<TD align="right"  bgcolor="#6060FF"><font color="#FFFFFF">14.4</font></TD>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_nuboso.png" alt="sw_nuboso.png" onmouseover=" overlib('Broken. Daylight. At 08/30/2020 09:00 UTC (H - 21)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_nuboso.png" alt="sw_nuboso.png" onmouseover=" overlib('Broken. Daylight. At 08/30/2020 12:00 UTC (H - 18)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_luna.png" alt="sw_luna.png" onmouseover=" overlib('Sky clear. Night. At 08/30/2020 15:00 UTC (H - 15)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_luna.png" alt="sw_luna.png" onmouseover=" overlib('Sky clear. Night. At 08/30/2020 18:00 UTC (H - 12)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_luna.png" alt="sw_luna.png" onmouseover=" overlib('Sky clear. Night. At 08/30/2020 21:00 UTC (H - 09)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_lunanub.png" alt="sw_lunanub.png" onmouseover=" overlib('Broken. Twilight. At 08/31/2020 00:00 UTC (H - 06)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_humo.png" alt="sw_humo.png" onmouseover=" overlib('Smoke. Daylight. At 08/31/2020 03:00 UTC (H - 03)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_nuboso.png" alt="sw_nuboso.png" onmouseover=" overlib('Broken. Daylight. At 08/31/2020 06:00 UTC (H - 00)'); " onmouseout=" return nd();">
+</td>
+</TR>
+<TR>
+<TD bgcolor="#a0c0a0"><a HREF="/cgi-bin/gsynres?ind=28698&lang=en&decoded=yes&ndays=2&ano=2020&mes=08&day=30&hora=06" onmouseover="return overlib('Decoded synops since 48 before 08/30/2020 06 UTC');" onmouseout=" return nd();">08/30</a></TD>
+<TD align="right" bgcolor="#FF8835"><font color="#000000">28.0</font></TD>
+<TD align="right" bgcolor="#D5FF3C"><font color="#000000">13.4</font></TD>
+<TD align="right"  bgcolor="#FFCD3C"><font color="#000000">20.6</font></TD>
+<TD align="right"  bgcolor="#D5FF3C"><font color="#000000">13.5</font></TD>
+<TD align="right"  bgcolor="#69FF60"><font color="#000000">67.6</font></TD>
+<TD align="center"  bgcolor="#a0a0c0"><font color="#000000">N</font></TD>
+<TD align="right"  bgcolor="#D5FF3C"><font color="#000000">3.6</font></TD>
+<TD align="right" bgcolor="#DDDDDD">----</TD>
+<TD align="right"  bgcolor="#A0FF47"><font color="#000000">1018.6</font></TD>
+<TD align="right" bgcolor="#FF8835"><font color="#000000">0.0</font></TD>
+<TD align="right"  bgcolor="#9090FF"><font color="#FFFFFF">2.1</font></TD>
+<TD align="right"  bgcolor="#9090FF"><font color="#FFFFFF">2.8</font></TD>
+<TD align="right"  bgcolor="#FFFF90"><font color="#000000">11.9</font></TD>
+<TD align="right"  bgcolor="#6060FF"><font color="#FFFFFF">10.8</font></TD>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_nuboso.png" alt="sw_nuboso.png" onmouseover=" overlib('Broken. Daylight. At 08/29/2020 09:00 UTC (H - 21)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_sol.png" alt="sw_sol.png" onmouseover=" overlib('Sky clear. Daylight. At 08/29/2020 12:00 UTC (H - 18)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_niebla_baja_noche.png" alt="sw_niebla_baja_noche.png" onmouseover=" overlib('Thin fog. Night. At 08/29/2020 15:00 UTC (H - 15)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_bruma_noche.png" alt="sw_bruma_noche.png" onmouseover=" overlib('Mist. Night. At 08/29/2020 18:00 UTC (H - 12)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_luna.png" alt="sw_luna.png" onmouseover=" overlib('Sky clear. Night. At 08/29/2020 21:00 UTC (H - 09)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_bruma_noche.png" alt="sw_bruma_noche.png" onmouseover=" overlib('Mist. Twilight. At 08/30/2020 00:00 UTC (H - 06)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_bruma.png" alt="sw_bruma.png" onmouseover=" overlib('Mist. Daylight. At 08/30/2020 03:00 UTC (H - 03)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_humo.png" alt="sw_humo.png" onmouseover=" overlib('Smoke. Daylight. At 08/30/2020 06:00 UTC (H - 00)'); " onmouseout=" return nd();">
+</td>
+</TR>
+<TR>
+<TD bgcolor="#a0c0a0"><a HREF="/cgi-bin/gsynres?ind=28698&lang=en&decoded=yes&ndays=2&ano=2020&mes=08&day=29&hora=06" onmouseover="return overlib('Decoded synops since 48 before 08/29/2020 06 UTC');" onmouseout=" return nd();">08/29</a></TD>
+<TD align="right" bgcolor="#FFB339"><font color="#000000">24.8</font></TD>
+<TD align="right" bgcolor="#A0FF47"><font color="#000000">12.5</font></TD>
+<TD align="right"  bgcolor="#ECEB3C"><font color="#000000">18.5</font></TD>
+<TD align="right"  bgcolor="#A0FF47"><font color="#000000">11.5</font></TD>
+<TD align="right"  bgcolor="#A0FF47"><font color="#000000">65.7</font></TD>
+<TD align="center"  bgcolor="#a0a0c0"><font color="#000000">SW</font></TD>
+<TD align="right"  bgcolor="#A0FF47"><font color="#000000">5.0</font></TD>
+<TD align="right" bgcolor="#DDDDDD">----</TD>
+<TD align="right"  bgcolor="#A0FF47"><font color="#000000">1017.5</font></TD>
+<TD align="right" bgcolor="#FF8835"><font color="#000000">0.0</font></TD>
+<TD align="right"  bgcolor="#9090FF"><font color="#FFFFFF">2.6</font></TD>
+<TD align="right"  bgcolor="#6060FF"><font color="#FFFFFF">2.0</font></TD>
+<TD align="right"  bgcolor="#FFFF50"><font color="#000000">12.1</font></TD>
+<TD align="right"  bgcolor="#6060FF"><font color="#FFFFFF">16.2</font></TD>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_nuboso.png" alt="sw_nuboso.png" onmouseover=" overlib('Broken. Daylight. At 08/28/2020 09:00 UTC (H - 21)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_cubierto.png" alt="sw_cubierto.png" onmouseover=" overlib('Overcast. Daylight. At 08/28/2020 12:00 UTC (H - 18)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_luna.png" alt="sw_luna.png" onmouseover=" overlib('Sky clear. Night. At 08/28/2020 15:00 UTC (H - 15)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_luna.png" alt="sw_luna.png" onmouseover=" overlib('Sky clear. Night. At 08/28/2020 18:00 UTC (H - 12)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_luna.png" alt="sw_luna.png" onmouseover=" overlib('Sky clear. Night. At 08/28/2020 21:00 UTC (H - 09)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_lunanub.png" alt="sw_lunanub.png" onmouseover=" overlib('Broken. Twilight. At 08/29/2020 00:00 UTC (H - 06)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_cubierto.png" alt="sw_cubierto.png" onmouseover=" overlib('Overcast. Daylight. At 08/29/2020 03:00 UTC (H - 03)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_nuboso.png" alt="sw_nuboso.png" onmouseover=" overlib('Broken. Daylight. At 08/29/2020 06:00 UTC (H - 00)'); " onmouseout=" return nd();">
+</td>
+</TR>
+<TR>
+<TD bgcolor="#a0c0a0"><a HREF="/cgi-bin/gsynres?ind=28698&lang=en&decoded=yes&ndays=2&ano=2020&mes=08&day=28&hora=06" onmouseover="return overlib('Decoded synops since 48 before 08/28/2020 06 UTC');" onmouseout=" return nd();">08/28</a></TD>
+<TD align="right" bgcolor="#FFCD3C"><font color="#000000">21.5</font></TD>
+<TD align="right" bgcolor="#69FF60"><font color="#000000">8.3</font></TD>
+<TD align="right"  bgcolor="#D5FF3C"><font color="#000000">15.3</font></TD>
+<TD align="right"  bgcolor="#A0FF47"><font color="#000000">10.9</font></TD>
+<TD align="right"  bgcolor="#0AFFBE"><font color="#000000">75.7</font></TD>
+<TD align="center"  bgcolor="#a0a0c0"><font color="#000000">WNW</font></TD>
+<TD align="right"  bgcolor="#A0FF47"><font color="#000000">7.2</font></TD>
+<TD align="right"  bgcolor="#0AFFBE"><font color="#000000">36.0</font></TD>
+<TD align="right"  bgcolor="#D5FF3C"><font color="#000000">1016.0</font></TD>
+<TD align="right" bgcolor="#D5FF3C">Tr</TD>
+<TD align="right"  bgcolor="#6060FF"><font color="#FFFFFF">1.6</font></TD>
+<TD align="right"  bgcolor="#9090FF"><font color="#FFFFFF">2.8</font></TD>
+<TD align="right"  bgcolor="#FFFFA0"><font color="#000000">7.0</font></TD>
+<TD align="right"  bgcolor="#6060FF"><font color="#FFFFFF">14.6</font></TD>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_nuboso.png" alt="sw_nuboso.png" onmouseover=" overlib('Broken. Daylight. At 08/27/2020 09:00 UTC (H - 21)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_nuboso.png" alt="sw_nuboso.png" onmouseover=" overlib('Broken. Daylight. At 08/27/2020 12:00 UTC (H - 18)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_luna.png" alt="sw_luna.png" onmouseover=" overlib('Sky clear. Night. At 08/27/2020 15:00 UTC (H - 15)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_luna.png" alt="sw_luna.png" onmouseover=" overlib('Sky clear. Night. At 08/27/2020 18:00 UTC (H - 12)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_luna.png" alt="sw_luna.png" onmouseover=" overlib('Sky clear. Night. At 08/27/2020 21:00 UTC (H - 09)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_luna.png" alt="sw_luna.png" onmouseover=" overlib('Sky clear. Twilight. At 08/28/2020 00:00 UTC (H - 06)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_bruma.png" alt="sw_bruma.png" onmouseover=" overlib('Mist. Daylight. At 08/28/2020 03:00 UTC (H - 03)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_sol.png" alt="sw_sol.png" onmouseover=" overlib('Sky clear. Daylight. At 08/28/2020 06:00 UTC (H - 00)'); " onmouseout=" return nd();">
+</td>
+</TR>
+<TR>
+<TD bgcolor="#a0c0a0"><a HREF="/cgi-bin/gsynres?ind=28698&lang=en&decoded=yes&ndays=2&ano=2020&mes=08&day=27&hora=06" onmouseover="return overlib('Decoded synops since 48 before 08/27/2020 06 UTC');" onmouseout=" return nd();">08/27</a></TD>
+<TD align="right" bgcolor="#FFB339"><font color="#000000">22.8</font></TD>
+<TD align="right" bgcolor="#D5FF3C"><font color="#000000">13.2</font></TD>
+<TD align="right"  bgcolor="#ECEB3C"><font color="#000000">17.6</font></TD>
+<TD align="right"  bgcolor="#D5FF3C"><font color="#000000">13.4</font></TD>
+<TD align="right"  bgcolor="#0AFFBE"><font color="#000000">79.5</font></TD>
+<TD align="center"  bgcolor="#a0a0c0"><font color="#000000">W</font></TD>
+<TD align="right"  bgcolor="#A0FF47"><font color="#000000">10.8</font></TD>
+<TD align="right"  bgcolor="#0AFFBE"><font color="#000000">36.0</font></TD>
+<TD align="right"  bgcolor="#FFCD3C"><font color="#000000">1007.4</font></TD>
+<TD align="right" bgcolor="#D5FF3C"><font color="#000000">2.0</font></TD>
+<TD align="right"  bgcolor="#D0D0F0"><font color="#000000">6.9</font></TD>
+<TD align="right"  bgcolor="#D0D0F0"><font color="#000000">6.4</font></TD>
+<TD align="right"  bgcolor="#FFFFA0"><font color="#000000">8.4</font></TD>
+<TD align="right"  bgcolor="#6060FF"><font color="#FFFFFF">12.1</font></TD>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_cubierto.png" alt="sw_cubierto.png" onmouseover=" overlib('Overcast. Daylight. At 08/26/2020 09:00 UTC (H - 21)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_cubierto.png" alt="sw_cubierto.png" onmouseover=" overlib('Overcast. Daylight. At 08/26/2020 12:00 UTC (H - 18)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_chu_lluvia_noche.png" alt="sw_chu_lluvia_noche.png" onmouseover=" overlib('Rain shower. Dawn. At 08/26/2020 15:00 UTC (H - 15)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_lunanub.png" alt="sw_lunanub.png" onmouseover=" overlib('Broken. Night. At 08/26/2020 18:00 UTC (H - 12)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_cubierto_noche.png" alt="sw_cubierto_noche.png" onmouseover=" overlib('Overcast. Night. At 08/26/2020 21:00 UTC (H - 09)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_chu_lluvia_noche.png" alt="sw_chu_lluvia_noche.png" onmouseover=" overlib('Rain shower. Twilight. At 08/27/2020 00:00 UTC (H - 06)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_chu_lluvia.png" alt="sw_chu_lluvia.png" onmouseover=" overlib('Rain shower. Daylight. At 08/27/2020 03:00 UTC (H - 03)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_cubierto.png" alt="sw_cubierto.png" onmouseover=" overlib('Overcast. Daylight. At 08/27/2020 06:00 UTC (H - 00)'); " onmouseout=" return nd();">
+</td>
+</TR>
+<TR>
+<TD bgcolor="#a0c0a0"><a HREF="/cgi-bin/gsynres?ind=28698&lang=en&decoded=yes&ndays=2&ano=2020&mes=08&day=26&hora=06" onmouseover="return overlib('Decoded synops since 48 before 08/26/2020 06 UTC');" onmouseout=" return nd();">08/26</a></TD>
+<TD align="right" bgcolor="#FFCD3C"><font color="#000000">21.0</font></TD>
+<TD align="right" bgcolor="#A0FF47"><font color="#000000">12.4</font></TD>
+<TD align="right"  bgcolor="#D5FF3C"><font color="#000000">14.8</font></TD>
+<TD align="right"  bgcolor="#A0FF47"><font color="#000000">12.8</font></TD>
+<TD align="right"  bgcolor="#1CFFFF"><font color="#000000">86.4</font></TD>
+<TD align="center"  bgcolor="#a0a0c0"><font color="#000000">WSW</font></TD>
+<TD align="right"  bgcolor="#A0FF47"><font color="#000000">5.4</font></TD>
+<TD align="right" bgcolor="#DDDDDD">----</TD>
+<TD align="right"  bgcolor="#FFCD3C"><font color="#000000">1008.1</font></TD>
+<TD align="right" bgcolor="#A0FF47"><font color="#000000">4.4</font></TD>
+<TD align="right"  bgcolor="#D0D0F0"><font color="#000000">6.4</font></TD>
+<TD align="right"  bgcolor="#B0B0FF"><font color="#000000">5.9</font></TD>
+<TD align="right"  bgcolor="#FFFFB8"><font color="#000000">4.9</font></TD>
+<TD align="right"  bgcolor="#6060FF"><font color="#FFFFFF">13.8</font></TD>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_cubierto.png" alt="sw_cubierto.png" onmouseover=" overlib('Overcast. Daylight. At 08/25/2020 09:00 UTC (H - 21)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_chu_lluvia.png" alt="sw_chu_lluvia.png" onmouseover=" overlib('Rain shower. Daylight. At 08/25/2020 12:00 UTC (H - 18)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_lunanub.png" alt="sw_lunanub.png" onmouseover=" overlib('Broken. Dawn. At 08/25/2020 15:00 UTC (H - 15)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_lunanub.png" alt="sw_lunanub.png" onmouseover=" overlib('Broken. Night. At 08/25/2020 18:00 UTC (H - 12)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_chu_lluvia_noche.png" alt="sw_chu_lluvia_noche.png" onmouseover=" overlib('Rain shower. Night. At 08/25/2020 21:00 UTC (H - 09)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_chu_lluvia_noche.png" alt="sw_chu_lluvia_noche.png" onmouseover=" overlib('Rain shower. Twilight. At 08/26/2020 00:00 UTC (H - 06)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_chu_lluvia.png" alt="sw_chu_lluvia.png" onmouseover=" overlib('Rain shower. Daylight. At 08/26/2020 03:00 UTC (H - 03)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_cubierto.png" alt="sw_cubierto.png" onmouseover=" overlib('Overcast. Daylight. At 08/26/2020 06:00 UTC (H - 00)'); " onmouseout=" return nd();">
+</td>
+</TR>
+<TR>
+<TD bgcolor="#a0c0a0"><a HREF="/cgi-bin/gsynres?ind=28698&lang=en&decoded=yes&ndays=2&ano=2020&mes=08&day=25&hora=06" onmouseover="return overlib('Decoded synops since 48 before 08/25/2020 06 UTC');" onmouseout=" return nd();">08/25</a></TD>
+<TD align="right" bgcolor="#ECEB3C"><font color="#000000">19.1</font></TD>
+<TD align="right" bgcolor="#A0FF47"><font color="#000000">12.5</font></TD>
+<TD align="right"  bgcolor="#D5FF3C"><font color="#000000">15.0</font></TD>
+<TD align="right"  bgcolor="#A0FF47"><font color="#000000">11.6</font></TD>
+<TD align="right"  bgcolor="#00FFFF"><font color="#000000">82.4</font></TD>
+<TD align="center"  bgcolor="#a0a0c0"><font color="#000000">NW</font></TD>
+<TD align="right"  bgcolor="#A0FF47"><font color="#000000">6.8</font></TD>
+<TD align="right" bgcolor="#DDDDDD">----</TD>
+<TD align="right"  bgcolor="#FFCD3C"><font color="#000000">1005.6</font></TD>
+<TD align="right" bgcolor="#D5FF3C"><font color="#000000">0.3</font></TD>
+<TD align="right"  bgcolor="#D0D0F0"><font color="#000000">7.6</font></TD>
+<TD align="right"  bgcolor="#D0D0F0"><font color="#000000">7.1</font></TD>
+<TD align="right"  bgcolor="#FFFFA0"><font color="#000000">7.4</font></TD>
+<TD align="right"  bgcolor="#6060FF"><font color="#FFFFFF">16.2</font></TD>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_cubierto.png" alt="sw_cubierto.png" onmouseover=" overlib('Overcast. Daylight. At 08/24/2020 09:00 UTC (H - 21)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_chu_lluvia.png" alt="sw_chu_lluvia.png" onmouseover=" overlib('Rain shower. Daylight. At 08/24/2020 12:00 UTC (H - 18)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_cubierto_noche.png" alt="sw_cubierto_noche.png" onmouseover=" overlib('Overcast. Dawn. At 08/24/2020 15:00 UTC (H - 15)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_cubierto_noche.png" alt="sw_cubierto_noche.png" onmouseover=" overlib('Overcast. Night. At 08/24/2020 18:00 UTC (H - 12)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_cubierto_noche.png" alt="sw_cubierto_noche.png" onmouseover=" overlib('Overcast. Night. At 08/24/2020 21:00 UTC (H - 09)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_cubierto.png" alt="sw_cubierto.png" onmouseover=" overlib('Overcast. Daylight. At 08/25/2020 00:00 UTC (H - 06)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_cubierto.png" alt="sw_cubierto.png" onmouseover=" overlib('Overcast. Daylight. At 08/25/2020 03:00 UTC (H - 03)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_chu_lluvia.png" alt="sw_chu_lluvia.png" onmouseover=" overlib('Rain shower. Daylight. At 08/25/2020 06:00 UTC (H - 00)'); " onmouseout=" return nd();">
+</td>
+</TR>
+<TR>
+<TD bgcolor="#a0c0a0"><a HREF="/cgi-bin/gsynres?ind=28698&lang=en&decoded=yes&ndays=2&ano=2020&mes=08&day=24&hora=06" onmouseover="return overlib('Decoded synops since 48 before 08/24/2020 06 UTC');" onmouseout=" return nd();">08/24</a></TD>
+<TD align="right" bgcolor="#ECEB3C"><font color="#000000">18.8</font></TD>
+<TD align="right" bgcolor="#A0FF47"><font color="#000000">10.1</font></TD>
+<TD align="right"  bgcolor="#D5FF3C"><font color="#000000">14.8</font></TD>
+<TD align="right"  bgcolor="#A0FF47"><font color="#000000">12.1</font></TD>
+<TD align="right"  bgcolor="#1CFFFF"><font color="#000000">84.9</font></TD>
+<TD align="center"  bgcolor="#a0a0c0"><font color="#000000">W</font></TD>
+<TD align="right"  bgcolor="#A0FF47"><font color="#000000">5.0</font></TD>
+<TD align="right" bgcolor="#DDDDDD">----</TD>
+<TD align="right"  bgcolor="#FFB339"><font color="#000000">1004.1</font></TD>
+<TD align="right" bgcolor="#A0FF47"><font color="#000000">3.0</font></TD>
+<TD align="right"  bgcolor="#B0B0FF"><font color="#000000">5.8</font></TD>
+<TD align="right"  bgcolor="#B0B0FF"><font color="#000000">4.4</font></TD>
+<TD align="right"  bgcolor="#FFFFB8"><font color="#000000">4.5</font></TD>
+<TD align="right"  bgcolor="#6060FF"><font color="#FFFFFF">14.4</font></TD>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_cubierto.png" alt="sw_cubierto.png" onmouseover=" overlib('Overcast. Daylight. At 08/23/2020 09:00 UTC (H - 21)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_cb_sct.png" alt="sw_cb_sct.png" onmouseover=" overlib('Cumulonimbus. Daylight. At 08/23/2020 12:00 UTC (H - 18)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_cb_noche.png" alt="sw_cb_noche.png" onmouseover=" overlib('Cumulonimbus. Dawn. At 08/23/2020 15:00 UTC (H - 15)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_lunanub.png" alt="sw_lunanub.png" onmouseover=" overlib('Broken. Night. At 08/23/2020 18:00 UTC (H - 12)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_cubierto_noche.png" alt="sw_cubierto_noche.png" onmouseover=" overlib('Overcast. Night. At 08/23/2020 21:00 UTC (H - 09)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_cubierto.png" alt="sw_cubierto.png" onmouseover=" overlib('Overcast. Daylight. At 08/24/2020 00:00 UTC (H - 06)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_bruma.png" alt="sw_bruma.png" onmouseover=" overlib('Mist. Daylight. At 08/24/2020 03:00 UTC (H - 03)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_cubierto.png" alt="sw_cubierto.png" onmouseover=" overlib('Overcast. Daylight. At 08/24/2020 06:00 UTC (H - 00)'); " onmouseout=" return nd();">
+</td>
+</TR>
+<TR>
+<TD bgcolor="#a0c0a0"><a HREF="/cgi-bin/gsynres?ind=28698&lang=en&decoded=yes&ndays=2&ano=2020&mes=08&day=23&hora=06" onmouseover="return overlib('Decoded synops since 48 before 08/23/2020 06 UTC');" onmouseout=" return nd();">08/23</a></TD>
+<TD align="right" bgcolor="#FFCD3C"><font color="#000000">22.2</font></TD>
+<TD align="right" bgcolor="#A0FF47"><font color="#000000">11.1</font></TD>
+<TD align="right"  bgcolor="#D5FF3C"><font color="#000000">15.5</font></TD>
+<TD align="right"  bgcolor="#A0FF47"><font color="#000000">12.6</font></TD>
+<TD align="right"  bgcolor="#1CFFFF"><font color="#000000">85.9</font></TD>
+<TD align="center"  bgcolor="#a0a0c0"><font color="#000000">WSW</font></TD>
+<TD align="right"  bgcolor="#D5FF3C"><font color="#000000">4.5</font></TD>
+<TD align="right" bgcolor="#DDDDDD">----</TD>
+<TD align="right"  bgcolor="#FFB339"><font color="#000000">1002.5</font></TD>
+<TD align="right" bgcolor="#A0FF47"><font color="#000000">3.4</font></TD>
+<TD align="right"  bgcolor="#D0D0F0"><font color="#000000">6.5</font></TD>
+<TD align="right"  bgcolor="#D0D0F0"><font color="#000000">6.1</font></TD>
+<TD align="right"  bgcolor="#FFFF90"><font color="#000000">10.2</font></TD>
+<TD align="right"  bgcolor="#6060FF"><font color="#FFFFFF">11.8</font></TD>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_cubierto.png" alt="sw_cubierto.png" onmouseover=" overlib('Overcast. Daylight. At 08/22/2020 09:00 UTC (H - 21)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_tormenta.png" alt="sw_tormenta.png" onmouseover=" overlib('Thunderstorm. Daylight. At 08/22/2020 12:00 UTC (H - 18)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_cb_noche.png" alt="sw_cb_noche.png" onmouseover=" overlib('Cumulonimbus. Dawn. At 08/22/2020 15:00 UTC (H - 15)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_cubierto_noche.png" alt="sw_cubierto_noche.png" onmouseover=" overlib('Overcast. Night. At 08/22/2020 18:00 UTC (H - 12)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_luna.png" alt="sw_luna.png" onmouseover=" overlib('Sky clear. Night. At 08/22/2020 21:00 UTC (H - 09)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_bruma.png" alt="sw_bruma.png" onmouseover=" overlib('Mist. Daylight. At 08/23/2020 00:00 UTC (H - 06)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_niebla.png" alt="sw_niebla.png" onmouseover=" overlib('Fog. Daylight. At 08/23/2020 03:00 UTC (H - 03)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_cubierto.png" alt="sw_cubierto.png" onmouseover=" overlib('Overcast. Daylight. At 08/23/2020 06:00 UTC (H - 00)'); " onmouseout=" return nd();">
+</td>
+</TR>
+<TR>
+<TD bgcolor="#a0c0a0"><a HREF="/cgi-bin/gsynres?ind=28698&lang=en&decoded=yes&ndays=2&ano=2020&mes=08&day=22&hora=06" onmouseover="return overlib('Decoded synops since 48 before 08/22/2020 06 UTC');" onmouseout=" return nd();">08/22</a></TD>
+<TD align="right" bgcolor="#FFCD3C"><font color="#000000">19.4</font></TD>
+<TD align="right" bgcolor="#A0FF47"><font color="#000000">10.7</font></TD>
+<TD align="right"  bgcolor="#D5FF3C"><font color="#000000">14.3</font></TD>
+<TD align="right"  bgcolor="#A0FF47"><font color="#000000">11.5</font></TD>
+<TD align="right"  bgcolor="#00FFFF"><font color="#000000">83.1</font></TD>
+<TD align="center"  bgcolor="#a0a0c0"><font color="#000000">SW</font></TD>
+<TD align="right"  bgcolor="#D5FF3C"><font color="#000000">4.5</font></TD>
+<TD align="right" bgcolor="#DDDDDD">----</TD>
+<TD align="right"  bgcolor="#FF8835"><font color="#000000">1001.8</font></TD>
+<TD align="right" bgcolor="#A0FF47"><font color="#000000">7.0</font></TD>
+<TD align="right"  bgcolor="#B0B0FF"><font color="#000000">5.1</font></TD>
+<TD align="right"  bgcolor="#9090FF"><font color="#FFFFFF">3.2</font></TD>
+<TD align="right"  bgcolor="#FFFFB8"><font color="#000000">4.9</font></TD>
+<TD align="right"  bgcolor="#6060FF"><font color="#FFFFFF">14.5</font></TD>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_cubierto.png" alt="sw_cubierto.png" onmouseover=" overlib('Overcast. Daylight. At 08/21/2020 09:00 UTC (H - 21)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_cubierto.png" alt="sw_cubierto.png" onmouseover=" overlib('Overcast. Daylight. At 08/21/2020 12:00 UTC (H - 18)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_cubierto_noche.png" alt="sw_cubierto_noche.png" onmouseover=" overlib('Overcast. Dawn. At 08/21/2020 15:00 UTC (H - 15)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_lunanub.png" alt="sw_lunanub.png" onmouseover=" overlib('Broken. Night. At 08/21/2020 18:00 UTC (H - 12)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_luna.png" alt="sw_luna.png" onmouseover=" overlib('Sky clear. Night. At 08/21/2020 21:00 UTC (H - 09)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_cubierto.png" alt="sw_cubierto.png" onmouseover=" overlib('Overcast. Daylight. At 08/22/2020 00:00 UTC (H - 06)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_bruma.png" alt="sw_bruma.png" onmouseover=" overlib('Mist. Daylight. At 08/22/2020 03:00 UTC (H - 03)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_cubierto.png" alt="sw_cubierto.png" onmouseover=" overlib('Overcast. Daylight. At 08/22/2020 06:00 UTC (H - 00)'); " onmouseout=" return nd();">
+</td>
+</TR>
+<TR>
+<TD bgcolor="#a0c0a0"><a HREF="/cgi-bin/gsynres?ind=28698&lang=en&decoded=yes&ndays=2&ano=2020&mes=08&day=21&hora=06" onmouseover="return overlib('Decoded synops since 48 before 08/21/2020 06 UTC');" onmouseout=" return nd();">08/21</a></TD>
+<TD align="right" bgcolor="#D5FF3C"><font color="#000000">15.6</font></TD>
+<TD align="right" bgcolor="#A0FF47"><font color="#000000">10.2</font></TD>
+<TD align="right"  bgcolor="#A0FF47"><font color="#000000">12.5</font></TD>
+<TD align="right"  bgcolor="#A0FF47"><font color="#000000">10.5</font></TD>
+<TD align="right"  bgcolor="#1CFFFF"><font color="#000000">86.1</font></TD>
+<TD align="center"  bgcolor="#a0a0c0"><font color="#000000">SW</font></TD>
+<TD align="right"  bgcolor="#A0FF47"><font color="#000000">5.0</font></TD>
+<TD align="right"  bgcolor="#0AFFBE"><font color="#000000">36.0</font></TD>
+<TD align="right"  bgcolor="#FF8835"><font color="#000000">998.7</font></TD>
+<TD align="right" bgcolor="#A0FF47"><font color="#000000">3.0</font></TD>
+<TD align="right"  bgcolor="#D0D0F0"><font color="#000000">7.8</font></TD>
+<TD align="right"  bgcolor="#D0D0F0"><font color="#000000">6.6</font></TD>
+<TD align="right"  bgcolor="#D0FFD0"><font color="#000000">0.2</font></TD>
+<TD align="right"  bgcolor="#6060FF"><font color="#FFFFFF">13.9</font></TD>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_cubierto.png" alt="sw_cubierto.png" onmouseover=" overlib('Overcast. Daylight. At 08/20/2020 09:00 UTC (H - 21)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_chu_lluvia.png" alt="sw_chu_lluvia.png" onmouseover=" overlib('Rain shower. Daylight. At 08/20/2020 12:00 UTC (H - 18)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_cb_noche.png" alt="sw_cb_noche.png" onmouseover=" overlib('Cumulonimbus. Dawn. At 08/20/2020 15:00 UTC (H - 15)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_cb_noche.png" alt="sw_cb_noche.png" onmouseover=" overlib('Cumulonimbus. Night. At 08/20/2020 18:00 UTC (H - 12)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_chu_lluvia_noche.png" alt="sw_chu_lluvia_noche.png" onmouseover=" overlib('Rain shower. Night. At 08/20/2020 21:00 UTC (H - 09)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_cubierto.png" alt="sw_cubierto.png" onmouseover=" overlib('Overcast. Daylight. At 08/21/2020 00:00 UTC (H - 06)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_chu_lluvia.png" alt="sw_chu_lluvia.png" onmouseover=" overlib('Rain shower. Daylight. At 08/21/2020 03:00 UTC (H - 03)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_cubierto.png" alt="sw_cubierto.png" onmouseover=" overlib('Overcast. Daylight. At 08/21/2020 06:00 UTC (H - 00)'); " onmouseout=" return nd();">
+</td>
+</TR>
+<TR>
+<TD bgcolor="#a0c0a0"><a HREF="/cgi-bin/gsynres?ind=28698&lang=en&decoded=yes&ndays=2&ano=2020&mes=08&day=20&hora=06" onmouseover="return overlib('Decoded synops since 48 before 08/20/2020 06 UTC');" onmouseout=" return nd();">08/20</a></TD>
+<TD align="right" bgcolor="#FFCD3C"><font color="#000000">21.0</font></TD>
+<TD align="right" bgcolor="#69FF60"><font color="#000000">8.9</font></TD>
+<TD align="right"  bgcolor="#D5FF3C"><font color="#000000">13.9</font></TD>
+<TD align="right"  bgcolor="#69FF60"><font color="#000000">9.5</font></TD>
+<TD align="right"  bgcolor="#0AFFBE"><font color="#000000">79.1</font></TD>
+<TD align="center"  bgcolor="#a0a0c0"><font color="#000000">SW</font></TD>
+<TD align="right"  bgcolor="#A0FF47"><font color="#000000">7.7</font></TD>
+<TD align="right"  bgcolor="#0AFFBE"><font color="#000000">39.6</font></TD>
+<TD align="right"  bgcolor="#FF502F"><font color="#FFFFFF">995.4</font></TD>
+<TD align="right" bgcolor="#A0FF47"><font color="#000000">6.3</font></TD>
+<TD align="right"  bgcolor="#D0D0F0"><font color="#000000">7.1</font></TD>
+<TD align="right"  bgcolor="#B0B0FF"><font color="#000000">6.0</font></TD>
+<TD align="right"  bgcolor="#FFFFA0"><font color="#000000">8.5</font></TD>
+<TD align="right"  bgcolor="#6060FF"><font color="#FFFFFF">12.2</font></TD>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_chu_lluvia.png" alt="sw_chu_lluvia.png" onmouseover=" overlib('Rain shower. Daylight. At 08/19/2020 09:00 UTC (H - 21)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_cubierto.png" alt="sw_cubierto.png" onmouseover=" overlib('Overcast. Daylight. At 08/19/2020 12:00 UTC (H - 18)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_chu_lluvia_noche.png" alt="sw_chu_lluvia_noche.png" onmouseover=" overlib('Rain shower. Dawn. At 08/19/2020 15:00 UTC (H - 15)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_cubierto_noche.png" alt="sw_cubierto_noche.png" onmouseover=" overlib('Overcast. Night. At 08/19/2020 18:00 UTC (H - 12)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_cb_noche.png" alt="sw_cb_noche.png" onmouseover=" overlib('Cumulonimbus. Night. At 08/19/2020 21:00 UTC (H - 09)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_cubierto.png" alt="sw_cubierto.png" onmouseover=" overlib('Overcast. Daylight. At 08/20/2020 00:00 UTC (H - 06)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_chu_lluvia.png" alt="sw_chu_lluvia.png" onmouseover=" overlib('Rain shower. Daylight. At 08/20/2020 03:00 UTC (H - 03)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_chu_lluvia.png" alt="sw_chu_lluvia.png" onmouseover=" overlib('Rain shower. Daylight. At 08/20/2020 06:00 UTC (H - 00)'); " onmouseout=" return nd();">
+</td>
+</TR>
+<TR>
+<TD bgcolor="#a0c0a0"><a HREF="/cgi-bin/gsynres?ind=28698&lang=en&decoded=yes&ndays=2&ano=2020&mes=08&day=19&hora=06" onmouseover="return overlib('Decoded synops since 48 before 08/19/2020 06 UTC');" onmouseout=" return nd();">08/19</a></TD>
+<TD align="right" bgcolor="#FFCD3C"><font color="#000000">22.3</font></TD>
+<TD align="right" bgcolor="#A0FF47"><font color="#000000">11.6</font></TD>
+<TD align="right"  bgcolor="#D5FF3C"><font color="#000000">15.4</font></TD>
+<TD align="right"  bgcolor="#A0FF47"><font color="#000000">12.0</font></TD>
+<TD align="right"  bgcolor="#00FFFF"><font color="#000000">82.9</font></TD>
+<TD align="center"  bgcolor="#a0a0c0"><font color="#000000">SSW</font></TD>
+<TD align="right"  bgcolor="#A0FF47"><font color="#000000">6.3</font></TD>
+<TD align="right"  bgcolor="#0AFFBE"><font color="#000000">39.6</font></TD>
+<TD align="right"  bgcolor="#FF502F"><font color="#FFFFFF">995.4</font></TD>
+<TD align="right" bgcolor="#A0FF47"><font color="#000000">7.0</font></TD>
+<TD align="right"  bgcolor="#D0D0F0"><font color="#000000">7.1</font></TD>
+<TD align="right"  bgcolor="#B0B0FF"><font color="#000000">5.4</font></TD>
+<TD align="right"  bgcolor="#FFFFA0"><font color="#000000">8.3</font></TD>
+<TD align="right"  bgcolor="#6060FF"><font color="#FFFFFF">15.5</font></TD>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_chu_lluvia.png" alt="sw_chu_lluvia.png" onmouseover=" overlib('Rain shower. Daylight. At 08/18/2020 09:00 UTC (H - 21)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_chu_lluvia.png" alt="sw_chu_lluvia.png" onmouseover=" overlib('Rain shower. Daylight. At 08/18/2020 12:00 UTC (H - 18)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_luna.png" alt="sw_luna.png" onmouseover=" overlib('Sky clear. Dawn. At 08/18/2020 15:00 UTC (H - 15)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_cubierto_noche.png" alt="sw_cubierto_noche.png" onmouseover=" overlib('Overcast. Night. At 08/18/2020 18:00 UTC (H - 12)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_chu_lluvia_noche.png" alt="sw_chu_lluvia_noche.png" onmouseover=" overlib('Rain shower. Night. At 08/18/2020 21:00 UTC (H - 09)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_cubierto.png" alt="sw_cubierto.png" onmouseover=" overlib('Overcast. Daylight. At 08/19/2020 00:00 UTC (H - 06)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_cubierto.png" alt="sw_cubierto.png" onmouseover=" overlib('Overcast. Daylight. At 08/19/2020 03:00 UTC (H - 03)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_cubierto.png" alt="sw_cubierto.png" onmouseover=" overlib('Overcast. Daylight. At 08/19/2020 06:00 UTC (H - 00)'); " onmouseout=" return nd();">
+</td>
+</TR>
+<TR>
+<TD bgcolor="#a0c0a0"><a HREF="/cgi-bin/gsynres?ind=28698&lang=en&decoded=yes&ndays=2&ano=2020&mes=08&day=18&hora=06" onmouseover="return overlib('Decoded synops since 48 before 08/18/2020 06 UTC');" onmouseout=" return nd();">08/18</a></TD>
+<TD align="right" bgcolor="#FFCD3C"><font color="#000000">21.9</font></TD>
+<TD align="right" bgcolor="#A0FF47"><font color="#000000">12.3</font></TD>
+<TD align="right"  bgcolor="#ECEB3C"><font color="#000000">16.8</font></TD>
+<TD align="right"  bgcolor="#D5FF3C"><font color="#000000">13.4</font></TD>
+<TD align="right"  bgcolor="#00FFFF"><font color="#000000">80.6</font></TD>
+<TD align="center"  bgcolor="#a0a0c0"><font color="#000000">E</font></TD>
+<TD align="right"  bgcolor="#A0FF47"><font color="#000000">8.6</font></TD>
+<TD align="right"  bgcolor="#0AFFBE"><font color="#000000">36.0</font></TD>
+<TD align="right"  bgcolor="#FF502F"><font color="#FFFFFF">997.8</font></TD>
+<TD align="right" bgcolor="#A0FF47"><font color="#000000">3.0</font></TD>
+<TD align="right"  bgcolor="#B0B0FF"><font color="#000000">5.8</font></TD>
+<TD align="right"  bgcolor="#B0B0FF"><font color="#000000">4.5</font></TD>
+<TD align="right"  bgcolor="#FFFFB8"><font color="#000000">4.9</font></TD>
+<TD align="right"  bgcolor="#6060FF"><font color="#FFFFFF">17.5</font></TD>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_cubierto.png" alt="sw_cubierto.png" onmouseover=" overlib('Overcast. Daylight. At 08/17/2020 09:00 UTC (H - 21)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_cubierto.png" alt="sw_cubierto.png" onmouseover=" overlib('Overcast. Daylight. At 08/17/2020 12:00 UTC (H - 18)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_cb_noche.png" alt="sw_cb_noche.png" onmouseover=" overlib('Cumulonimbus. Dawn. At 08/17/2020 15:00 UTC (H - 15)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_lunanub.png" alt="sw_lunanub.png" onmouseover=" overlib('Broken. Night. At 08/17/2020 18:00 UTC (H - 12)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_cubierto_noche.png" alt="sw_cubierto_noche.png" onmouseover=" overlib('Overcast. Night. At 08/17/2020 21:00 UTC (H - 09)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_cubierto.png" alt="sw_cubierto.png" onmouseover=" overlib('Overcast. Daylight. At 08/18/2020 00:00 UTC (H - 06)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_chu_lluvia.png" alt="sw_chu_lluvia.png" onmouseover=" overlib('Rain shower. Daylight. At 08/18/2020 03:00 UTC (H - 03)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_nuboso.png" alt="sw_nuboso.png" onmouseover=" overlib('Broken. Daylight. At 08/18/2020 06:00 UTC (H - 00)'); " onmouseout=" return nd();">
+</td>
+</TR>
+<TR>
+<TD bgcolor="#a0c0a0"><a HREF="/cgi-bin/gsynres?ind=28698&lang=en&decoded=yes&ndays=2&ano=2020&mes=08&day=17&hora=06" onmouseover="return overlib('Decoded synops since 48 before 08/17/2020 06 UTC');" onmouseout=" return nd();">08/17</a></TD>
+<TD align="right" bgcolor="#FFB339"><font color="#000000">24.8</font></TD>
+<TD align="right" bgcolor="#D5FF3C"><font color="#000000">14.7</font></TD>
+<TD align="right"  bgcolor="#FFCD3C"><font color="#000000">19.7</font></TD>
+<TD align="right"  bgcolor="#A0FF47"><font color="#000000">11.1</font></TD>
+<TD align="right"  bgcolor="#A0FF47"><font color="#000000">63.6</font></TD>
+<TD align="center"  bgcolor="#a0a0c0"><font color="#000000">ESE</font></TD>
+<TD align="right"  bgcolor="#A0FF47"><font color="#000000">12.6</font></TD>
+<TD align="right" bgcolor="#DDDDDD">----</TD>
+<TD align="right"  bgcolor="#FFB339"><font color="#000000">1003.4</font></TD>
+<TD align="right" bgcolor="#A0FF47"><font color="#000000">3.0</font></TD>
+<TD align="right"  bgcolor="#EEEEEE"><font color="#000000">8.0</font></TD>
+<TD align="right"  bgcolor="#9090FF"><font color="#FFFFFF">2.4</font></TD>
+<TD align="right"  bgcolor="#FFFF90"><font color="#000000">10.5</font></TD>
+<TD align="right"  bgcolor="#6060FF"><font color="#FFFFFF">13.0</font></TD>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_cubierto.png" alt="sw_cubierto.png" onmouseover=" overlib('Overcast. Daylight. At 08/16/2020 09:00 UTC (H - 21)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_cubierto.png" alt="sw_cubierto.png" onmouseover=" overlib('Overcast. Daylight. At 08/16/2020 12:00 UTC (H - 18)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_cubierto_noche.png" alt="sw_cubierto_noche.png" onmouseover=" overlib('Overcast. Dawn. At 08/16/2020 15:00 UTC (H - 15)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_cubierto_noche.png" alt="sw_cubierto_noche.png" onmouseover=" overlib('Overcast. Night. At 08/16/2020 18:00 UTC (H - 12)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_cb_noche.png" alt="sw_cb_noche.png" onmouseover=" overlib('Cumulonimbus. Night. At 08/16/2020 21:00 UTC (H - 09)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_chu_lluvia.png" alt="sw_chu_lluvia.png" onmouseover=" overlib('Rain shower. Daylight. At 08/17/2020 00:00 UTC (H - 06)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_chu_lluvia.png" alt="sw_chu_lluvia.png" onmouseover=" overlib('Rain shower. Daylight. At 08/17/2020 03:00 UTC (H - 03)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_bruma.png" alt="sw_bruma.png" onmouseover=" overlib('Mist. Daylight. At 08/17/2020 06:00 UTC (H - 00)'); " onmouseout=" return nd();">
+</td>
+</TR>
+<TR>
+<TD bgcolor="#a0c0a0"><a HREF="/cgi-bin/gsynres?ind=28698&lang=en&decoded=yes&ndays=2&ano=2020&mes=08&day=16&hora=06" onmouseover="return overlib('Decoded synops since 48 before 08/16/2020 06 UTC');" onmouseout=" return nd();">08/16</a></TD>
+<TD align="right" bgcolor="#FFB339"><font color="#000000">23.0</font></TD>
+<TD align="right" bgcolor="#69FF60"><font color="#000000">9.0</font></TD>
+<TD align="right"  bgcolor="#ECEB3C"><font color="#000000">16.3</font></TD>
+<TD align="right"  bgcolor="#69FF60"><font color="#000000">8.6</font></TD>
+<TD align="right"  bgcolor="#A0FF47"><font color="#000000">62.8</font></TD>
+<TD align="center"  bgcolor="#a0a0c0"><font color="#000000">E</font></TD>
+<TD align="right"  bgcolor="#A0FF47"><font color="#000000">7.7</font></TD>
+<TD align="right" bgcolor="#DDDDDD">----</TD>
+<TD align="right"  bgcolor="#ECEB3C"><font color="#000000">1011.5</font></TD>
+<TD align="right" bgcolor="#FF8835"><font color="#000000">0.0</font></TD>
+<TD align="right"  bgcolor="#B0B0FF"><font color="#000000">4.2</font></TD>
+<TD align="right"  bgcolor="#6060FF"><font color="#FFFFFF">0.3</font></TD>
+<TD align="right"  bgcolor="#FFFF50"><font color="#000000">13.7</font></TD>
+<TD align="right"  bgcolor="#6060FF"><font color="#FFFFFF">17.5</font></TD>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_cubierto.png" alt="sw_cubierto.png" onmouseover=" overlib('Overcast. Daylight. At 08/15/2020 09:00 UTC (H - 21)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_nuboso.png" alt="sw_nuboso.png" onmouseover=" overlib('Broken. Daylight. At 08/15/2020 12:00 UTC (H - 18)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_lunanub.png" alt="sw_lunanub.png" onmouseover=" overlib('Broken. Dawn. At 08/15/2020 15:00 UTC (H - 15)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_luna.png" alt="sw_luna.png" onmouseover=" overlib('Sky clear. Night. At 08/15/2020 18:00 UTC (H - 12)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_luna.png" alt="sw_luna.png" onmouseover=" overlib('Sky clear. Night. At 08/15/2020 21:00 UTC (H - 09)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_cubierto.png" alt="sw_cubierto.png" onmouseover=" overlib('Overcast. Daylight. At 08/16/2020 00:00 UTC (H - 06)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_cubierto.png" alt="sw_cubierto.png" onmouseover=" overlib('Overcast. Daylight. At 08/16/2020 03:00 UTC (H - 03)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_cubierto.png" alt="sw_cubierto.png" onmouseover=" overlib('Overcast. Daylight. At 08/16/2020 06:00 UTC (H - 00)'); " onmouseout=" return nd();">
+</td>
+</TR>
+<TR>
+<TD bgcolor="#a0c0a0"><a HREF="/cgi-bin/gsynres?ind=28698&lang=en&decoded=yes&ndays=2&ano=2020&mes=08&day=15&hora=06" onmouseover="return overlib('Decoded synops since 48 before 08/15/2020 06 UTC');" onmouseout=" return nd();">08/15</a></TD>
+<TD align="right" bgcolor="#FFCD3C"><font color="#000000">20.0</font></TD>
+<TD align="right" bgcolor="#37FF8E"><font color="#000000">6.2</font></TD>
+<TD align="right"  bgcolor="#D5FF3C"><font color="#000000">13.9</font></TD>
+<TD align="right"  bgcolor="#69FF60"><font color="#000000">9.2</font></TD>
+<TD align="right"  bgcolor="#0AFFBE"><font color="#000000">75.9</font></TD>
+<TD align="center"  bgcolor="#a0a0c0"><font color="#000000">NW</font></TD>
+<TD align="right"  bgcolor="#D5FF3C"><font color="#000000">3.6</font></TD>
+<TD align="right" bgcolor="#DDDDDD">----</TD>
+<TD align="right"  bgcolor="#ECEB3C"><font color="#000000">1010.5</font></TD>
+<TD align="right" bgcolor="#FF8835"><font color="#000000">0.0</font></TD>
+<TD align="right"  bgcolor="#9090FF"><font color="#FFFFFF">4.0</font></TD>
+<TD align="right"  bgcolor="#9090FF"><font color="#FFFFFF">3.0</font></TD>
+<TD align="right"  bgcolor="#FFFF90"><font color="#000000">9.9</font></TD>
+<TD align="right"  bgcolor="#6060FF"><font color="#FFFFFF">17.5</font></TD>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_cubierto.png" alt="sw_cubierto.png" onmouseover=" overlib('Overcast. Daylight. At 08/14/2020 09:00 UTC (H - 21)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_cubierto.png" alt="sw_cubierto.png" onmouseover=" overlib('Overcast. Daylight. At 08/14/2020 12:00 UTC (H - 18)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_cubierto_noche.png" alt="sw_cubierto_noche.png" onmouseover=" overlib('Overcast. Dawn. At 08/14/2020 15:00 UTC (H - 15)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_lunanub.png" alt="sw_lunanub.png" onmouseover=" overlib('Broken. Night. At 08/14/2020 18:00 UTC (H - 12)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_lunanub.png" alt="sw_lunanub.png" onmouseover=" overlib('Broken. Night. At 08/14/2020 21:00 UTC (H - 09)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_niebla_baja.png" alt="sw_niebla_baja.png" onmouseover=" overlib('Thin fog. Daylight. At 08/15/2020 00:00 UTC (H - 06)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_sol.png" alt="sw_sol.png" onmouseover=" overlib('Sky clear. Daylight. At 08/15/2020 03:00 UTC (H - 03)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_cubierto.png" alt="sw_cubierto.png" onmouseover=" overlib('Overcast. Daylight. At 08/15/2020 06:00 UTC (H - 00)'); " onmouseout=" return nd();">
+</td>
+</TR>
+<TR>
+<TD bgcolor="#a0c0a0"><a HREF="/cgi-bin/gsynres?ind=28698&lang=en&decoded=yes&ndays=2&ano=2020&mes=08&day=14&hora=06" onmouseover="return overlib('Decoded synops since 48 before 08/14/2020 06 UTC');" onmouseout=" return nd();">08/14</a></TD>
+<TD align="right" bgcolor="#ECEB3C"><font color="#000000">18.0</font></TD>
+<TD align="right" bgcolor="#A0FF47"><font color="#000000">12.2</font></TD>
+<TD align="right"  bgcolor="#D5FF3C"><font color="#000000">14.2</font></TD>
+<TD align="right"  bgcolor="#A0FF47"><font color="#000000">11.8</font></TD>
+<TD align="right"  bgcolor="#1CFFFF"><font color="#000000">86.8</font></TD>
+<TD align="center"  bgcolor="#a0a0c0"><font color="#000000">NW</font></TD>
+<TD align="right"  bgcolor="#A0FF47"><font color="#000000">13.1</font></TD>
+<TD align="right"  bgcolor="#0AFFBE"><font color="#000000">36.0</font></TD>
+<TD align="right"  bgcolor="#FFB339"><font color="#000000">1004.6</font></TD>
+<TD align="right" bgcolor="#69FF60"><font color="#000000">10.0</font></TD>
+<TD align="right"  bgcolor="#D0D0F0"><font color="#000000">7.6</font></TD>
+<TD align="right"  bgcolor="#D0D0F0"><font color="#000000">7.2</font></TD>
+<TD align="right"  bgcolor="#B8FFB8"><font color="#000000">0.0</font></TD>
+<TD align="right"  bgcolor="#6060FF"><font color="#FFFFFF">14.8</font></TD>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_chu_lluvia.png" alt="sw_chu_lluvia.png" onmouseover=" overlib('Rain shower. Daylight. At 08/13/2020 09:00 UTC (H - 21)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_cubierto.png" alt="sw_cubierto.png" onmouseover=" overlib('Overcast. Daylight. At 08/13/2020 12:00 UTC (H - 18)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_chu_lluvia_noche.png" alt="sw_chu_lluvia_noche.png" onmouseover=" overlib('Rain shower. Dawn. At 08/13/2020 15:00 UTC (H - 15)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_cb_noche.png" alt="sw_cb_noche.png" onmouseover=" overlib('Cumulonimbus. Night. At 08/13/2020 18:00 UTC (H - 12)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_cb_noche.png" alt="sw_cb_noche.png" onmouseover=" overlib('Cumulonimbus. Night. At 08/13/2020 21:00 UTC (H - 09)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_cubierto.png" alt="sw_cubierto.png" onmouseover=" overlib('Overcast. Daylight. At 08/14/2020 00:00 UTC (H - 06)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_cubierto.png" alt="sw_cubierto.png" onmouseover=" overlib('Overcast. Daylight. At 08/14/2020 03:00 UTC (H - 03)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_cubierto.png" alt="sw_cubierto.png" onmouseover=" overlib('Overcast. Daylight. At 08/14/2020 06:00 UTC (H - 00)'); " onmouseout=" return nd();">
+</td>
+</TR>
+<TR>
+<TD bgcolor="#a0c0a0"><a HREF="/cgi-bin/gsynres?ind=28698&lang=en&decoded=yes&ndays=2&ano=2020&mes=08&day=13&hora=06" onmouseover="return overlib('Decoded synops since 48 before 08/13/2020 06 UTC');" onmouseout=" return nd();">08/13</a></TD>
+<TD align="right" bgcolor="#FFB339"><font color="#000000">24.6</font></TD>
+<TD align="right" bgcolor="#D5FF3C"><font color="#000000">13.2</font></TD>
+<TD align="right"  bgcolor="#ECEB3C"><font color="#000000">18.5</font></TD>
+<TD align="right"  bgcolor="#D5FF3C"><font color="#000000">15.4</font></TD>
+<TD align="right"  bgcolor="#1CFFFF"><font color="#000000">86.1</font></TD>
+<TD align="center"  bgcolor="#a0a0c0"><font color="#000000">WNW</font></TD>
+<TD align="right"  bgcolor="#D5FF3C"><font color="#000000">4.5</font></TD>
+<TD align="right" bgcolor="#DDDDDD">----</TD>
+<TD align="right"  bgcolor="#FF502F"><font color="#FFFFFF">996.7</font></TD>
+<TD align="right" bgcolor="#D5FF3C">Tr</TD>
+<TD align="right"  bgcolor="#D0D0F0"><font color="#000000">6.8</font></TD>
+<TD align="right"  bgcolor="#B0B0FF"><font color="#000000">5.5</font></TD>
+<TD align="right"  bgcolor="#FFFFB8"><font color="#000000">5.5</font></TD>
+<TD align="right"  bgcolor="#6060FF"><font color="#FFFFFF">12.7</font></TD>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_tormenta.png" alt="sw_tormenta.png" onmouseover=" overlib('Thunderstorm. Daylight. At 08/12/2020 09:00 UTC (H - 21)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_cubierto.png" alt="sw_cubierto.png" onmouseover=" overlib('Overcast. Daylight. At 08/12/2020 12:00 UTC (H - 18)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_cubierto_noche.png" alt="sw_cubierto_noche.png" onmouseover=" overlib('Overcast. Dawn. At 08/12/2020 15:00 UTC (H - 15)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_cubierto_noche.png" alt="sw_cubierto_noche.png" onmouseover=" overlib('Overcast. Night. At 08/12/2020 18:00 UTC (H - 12)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_lunanub.png" alt="sw_lunanub.png" onmouseover=" overlib('Broken. Night. At 08/12/2020 21:00 UTC (H - 09)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_niebla.png" alt="sw_niebla.png" onmouseover=" overlib('Fog. Daylight. At 08/13/2020 00:00 UTC (H - 06)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_bruma.png" alt="sw_bruma.png" onmouseover=" overlib('Mist. Daylight. At 08/13/2020 03:00 UTC (H - 03)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_chu_lluvia.png" alt="sw_chu_lluvia.png" onmouseover=" overlib('Rain shower. Daylight. At 08/13/2020 06:00 UTC (H - 00)'); " onmouseout=" return nd();">
+</td>
+</TR>
+<TR>
+<TD bgcolor="#a0c0a0"><a HREF="/cgi-bin/gsynres?ind=28698&lang=en&decoded=yes&ndays=2&ano=2020&mes=08&day=12&hora=06" onmouseover="return overlib('Decoded synops since 48 before 08/12/2020 06 UTC');" onmouseout=" return nd();">08/12</a></TD>
+<TD align="right" bgcolor="#FF502F"><font color="#FFFFFF">29.8</font></TD>
+<TD align="right" bgcolor="#A0FF47"><font color="#000000">12.6</font></TD>
+<TD align="right"  bgcolor="#FFCD3C"><font color="#000000">19.6</font></TD>
+<TD align="right"  bgcolor="#D5FF3C"><font color="#000000">14.9</font></TD>
+<TD align="right"  bgcolor="#00FFFF"><font color="#000000">79.9</font></TD>
+<TD align="center"  bgcolor="#a0a0c0"><font color="#000000">SE</font></TD>
+<TD align="right"  bgcolor="#A0FF47"><font color="#000000">5.9</font></TD>
+<TD align="right"  bgcolor="#0AFFBE"><font color="#000000">36.0</font></TD>
+<TD align="right"  bgcolor="#FF002D"><font color="#FFFFFF">993.9</font></TD>
+<TD align="right" bgcolor="#D5FF3C"><font color="#000000">1.0</font></TD>
+<TD align="right"  bgcolor="#B0B0FF"><font color="#000000">5.0</font></TD>
+<TD align="right"  bgcolor="#9090FF"><font color="#FFFFFF">3.4</font></TD>
+<TD align="right"  bgcolor="#FFFF90"><font color="#000000">9.3</font></TD>
+<TD align="right"  bgcolor="#6060FF"><font color="#FFFFFF">12.2</font></TD>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_cubierto.png" alt="sw_cubierto.png" onmouseover=" overlib('Overcast. Daylight. At 08/11/2020 09:00 UTC (H - 21)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_tormenta.png" alt="sw_tormenta.png" onmouseover=" overlib('Thunderstorm. Daylight. At 08/11/2020 12:00 UTC (H - 18)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_lunanub.png" alt="sw_lunanub.png" onmouseover=" overlib('Broken. Dawn. At 08/11/2020 15:00 UTC (H - 15)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_bruma_noche.png" alt="sw_bruma_noche.png" onmouseover=" overlib('Mist. Night. At 08/11/2020 18:00 UTC (H - 12)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_niebla_noche.png" alt="sw_niebla_noche.png" onmouseover=" overlib('Fog. Night. At 08/11/2020 21:00 UTC (H - 09)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_niebla.png" alt="sw_niebla.png" onmouseover=" overlib('Fog. Daylight. At 08/12/2020 00:00 UTC (H - 06)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_bruma.png" alt="sw_bruma.png" onmouseover=" overlib('Mist. Daylight. At 08/12/2020 03:00 UTC (H - 03)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_cubierto.png" alt="sw_cubierto.png" onmouseover=" overlib('Overcast. Daylight. At 08/12/2020 06:00 UTC (H - 00)'); " onmouseout=" return nd();">
+</td>
+</TR>
+<TR>
+<TD bgcolor="#a0c0a0"><a HREF="/cgi-bin/gsynres?ind=28698&lang=en&decoded=yes&ndays=2&ano=2020&mes=08&day=11&hora=06" onmouseover="return overlib('Decoded synops since 48 before 08/11/2020 06 UTC');" onmouseout=" return nd();">08/11</a></TD>
+<TD align="right" bgcolor="#FF502F"><font color="#FFFFFF">30.0</font></TD>
+<TD align="right" bgcolor="#D5FF3C"><font color="#000000">15.1</font></TD>
+<TD align="right"  bgcolor="#FFB339"><font color="#000000">23.5</font></TD>
+<TD align="right"  bgcolor="#D5FF3C"><font color="#000000">14.0</font></TD>
+<TD align="right"  bgcolor="#D5FF3C"><font color="#000000">57.8</font></TD>
+<TD align="center"  bgcolor="#a0a0c0"><font color="#000000">ESE</font></TD>
+<TD align="right"  bgcolor="#A0FF47"><font color="#000000">8.6</font></TD>
+<TD align="right"  bgcolor="#00FFFF"><font color="#000000">46.8</font></TD>
+<TD align="right"  bgcolor="#FF502F"><font color="#FFFFFF">995.0</font></TD>
+<TD align="right" bgcolor="#D5FF3C">Tr</TD>
+<TD align="right"  bgcolor="#D0D0F0"><font color="#000000">6.2</font></TD>
+<TD align="right"  bgcolor="#9090FF"><font color="#FFFFFF">3.4</font></TD>
+<TD align="right"  bgcolor="#FFFFA0"><font color="#000000">6.1</font></TD>
+<TD align="right"  bgcolor="#6060FF"><font color="#FFFFFF">16.8</font></TD>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_tormenta.png" alt="sw_tormenta.png" onmouseover=" overlib('Thunderstorm. Daylight. At 08/10/2020 09:00 UTC (H - 21)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_cubierto.png" alt="sw_cubierto.png" onmouseover=" overlib('Overcast. Daylight. At 08/10/2020 12:00 UTC (H - 18)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_cb_noche.png" alt="sw_cb_noche.png" onmouseover=" overlib('Cumulonimbus. Dawn. At 08/10/2020 15:00 UTC (H - 15)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_chu_lluvia_noche.png" alt="sw_chu_lluvia_noche.png" onmouseover=" overlib('Rain shower. Night. At 08/10/2020 18:00 UTC (H - 12)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_cb_noche.png" alt="sw_cb_noche.png" onmouseover=" overlib('Cumulonimbus. Night. At 08/10/2020 21:00 UTC (H - 09)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_cubierto.png" alt="sw_cubierto.png" onmouseover=" overlib('Overcast. Daylight. At 08/11/2020 00:00 UTC (H - 06)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_nuboso.png" alt="sw_nuboso.png" onmouseover=" overlib('Broken. Daylight. At 08/11/2020 03:00 UTC (H - 03)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_cubierto.png" alt="sw_cubierto.png" onmouseover=" overlib('Overcast. Daylight. At 08/11/2020 06:00 UTC (H - 00)'); " onmouseout=" return nd();">
+</td>
+</TR>
+<TR>
+<TD bgcolor="#a0c0a0"><a HREF="/cgi-bin/gsynres?ind=28698&lang=en&decoded=yes&ndays=2&ano=2020&mes=08&day=10&hora=06" onmouseover="return overlib('Decoded synops since 48 before 08/10/2020 06 UTC');" onmouseout=" return nd();">08/10</a></TD>
+<TD align="right" bgcolor="#FF502F"><font color="#FFFFFF">30.3</font></TD>
+<TD align="right" bgcolor="#ECEB3C"><font color="#000000">18.3</font></TD>
+<TD align="right"  bgcolor="#FFB339"><font color="#000000">25.0</font></TD>
+<TD align="right"  bgcolor="#D5FF3C"><font color="#000000">13.6</font></TD>
+<TD align="right"  bgcolor="#FFCD3C"><font color="#000000">51.7</font></TD>
+<TD align="center"  bgcolor="#a0a0c0"><font color="#000000">E</font></TD>
+<TD align="right"  bgcolor="#A0FF47"><font color="#000000">14.0</font></TD>
+<TD align="right"  bgcolor="#0AFFBE"><font color="#000000">39.6</font></TD>
+<TD align="right"  bgcolor="#FF502F"><font color="#FFFFFF">998.2</font></TD>
+<TD align="right" bgcolor="#D5FF3C">Tr</TD>
+<TD align="right"  bgcolor="#B0B0FF"><font color="#000000">5.1</font></TD>
+<TD align="right"  bgcolor="#6060FF"><font color="#FFFFFF">1.8</font></TD>
+<TD align="right"  bgcolor="#FFFF50"><font color="#000000">12.8</font></TD>
+<TD align="right"  bgcolor="#6060FF"><font color="#FFFFFF">17.5</font></TD>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_cubierto.png" alt="sw_cubierto.png" onmouseover=" overlib('Overcast. Daylight. At 08/09/2020 09:00 UTC (H - 21)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_nuboso.png" alt="sw_nuboso.png" onmouseover=" overlib('Broken. Daylight. At 08/09/2020 12:00 UTC (H - 18)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_lunanub.png" alt="sw_lunanub.png" onmouseover=" overlib('Broken. Dawn. At 08/09/2020 15:00 UTC (H - 15)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_lunanub.png" alt="sw_lunanub.png" onmouseover=" overlib('Broken. Night. At 08/09/2020 18:00 UTC (H - 12)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_cb_noche.png" alt="sw_cb_noche.png" onmouseover=" overlib('Cumulonimbus. Night. At 08/09/2020 21:00 UTC (H - 09)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_nuboso.png" alt="sw_nuboso.png" onmouseover=" overlib('Broken. Daylight. At 08/10/2020 00:00 UTC (H - 06)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_chu_lluvia.png" alt="sw_chu_lluvia.png" onmouseover=" overlib('Rain shower. Daylight. At 08/10/2020 03:00 UTC (H - 03)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_cubierto.png" alt="sw_cubierto.png" onmouseover=" overlib('Overcast. Daylight. At 08/10/2020 06:00 UTC (H - 00)'); " onmouseout=" return nd();">
+</td>
+</TR>
+<TR>
+<TD bgcolor="#a0c0a0"><a HREF="/cgi-bin/gsynres?ind=28698&lang=en&decoded=yes&ndays=2&ano=2020&mes=08&day=09&hora=06" onmouseover="return overlib('Decoded synops since 48 before 08/09/2020 06 UTC');" onmouseout=" return nd();">08/09</a></TD>
+<TD align="right" bgcolor="#FF502F"><font color="#FFFFFF">30.5</font></TD>
+<TD align="right" bgcolor="#ECEB3C"><font color="#000000">16.3</font></TD>
+<TD align="right"  bgcolor="#FFB339"><font color="#000000">23.7</font></TD>
+<TD align="right"  bgcolor="#D5FF3C"><font color="#000000">13.1</font></TD>
+<TD align="right"  bgcolor="#ECEB3C"><font color="#000000">54.6</font></TD>
+<TD align="center"  bgcolor="#a0a0c0"><font color="#000000">ENE</font></TD>
+<TD align="right"  bgcolor="#A0FF47"><font color="#000000">10.8</font></TD>
+<TD align="right" bgcolor="#DDDDDD">----</TD>
+<TD align="right"  bgcolor="#FFB339"><font color="#000000">1005.1</font></TD>
+<TD align="right" bgcolor="#FF8835"><font color="#000000">0.0</font></TD>
+<TD align="right"  bgcolor="#9090FF"><font color="#FFFFFF">2.6</font></TD>
+<TD align="right"  bgcolor="#6060FF"><font color="#FFFFFF">0.8</font></TD>
+<TD align="right"  bgcolor="#FFFF50"><font color="#000000">14.2</font></TD>
+<TD align="right"  bgcolor="#6060FF"><font color="#FFFFFF">17.5</font></TD>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_nuboso.png" alt="sw_nuboso.png" onmouseover=" overlib('Broken. Daylight. At 08/08/2020 09:00 UTC (H - 21)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_nuboso.png" alt="sw_nuboso.png" onmouseover=" overlib('Broken. Daylight. At 08/08/2020 12:00 UTC (H - 18)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_lunanub.png" alt="sw_lunanub.png" onmouseover=" overlib('Broken. Dawn. At 08/08/2020 15:00 UTC (H - 15)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_luna.png" alt="sw_luna.png" onmouseover=" overlib('Sky clear. Night. At 08/08/2020 18:00 UTC (H - 12)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_luna.png" alt="sw_luna.png" onmouseover=" overlib('Sky clear. Night. At 08/08/2020 21:00 UTC (H - 09)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_nuboso.png" alt="sw_nuboso.png" onmouseover=" overlib('Broken. Daylight. At 08/09/2020 00:00 UTC (H - 06)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_cubierto.png" alt="sw_cubierto.png" onmouseover=" overlib('Overcast. Daylight. At 08/09/2020 03:00 UTC (H - 03)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_cubierto.png" alt="sw_cubierto.png" onmouseover=" overlib('Overcast. Daylight. At 08/09/2020 06:00 UTC (H - 00)'); " onmouseout=" return nd();">
+</td>
+</TR>
+<TR>
+<TD bgcolor="#a0c0a0"><a HREF="/cgi-bin/gsynres?ind=28698&lang=en&decoded=yes&ndays=2&ano=2020&mes=08&day=08&hora=06" onmouseover="return overlib('Decoded synops since 48 before 08/08/2020 06 UTC');" onmouseout=" return nd();">08/08</a></TD>
+<TD align="right" bgcolor="#FF502F"><font color="#FFFFFF">30.8</font></TD>
+<TD align="right" bgcolor="#D5FF3C"><font color="#000000">15.3</font></TD>
+<TD align="right"  bgcolor="#FFB339"><font color="#000000">24.0</font></TD>
+<TD align="right"  bgcolor="#D5FF3C"><font color="#000000">13.3</font></TD>
+<TD align="right"  bgcolor="#ECEB3C"><font color="#000000">53.6</font></TD>
+<TD align="center"  bgcolor="#a0a0c0"><font color="#000000">ENE</font></TD>
+<TD align="right"  bgcolor="#A0FF47"><font color="#000000">9.0</font></TD>
+<TD align="right"  bgcolor="#00FFFF"><font color="#000000">46.8</font></TD>
+<TD align="right"  bgcolor="#ECEB3C"><font color="#000000">1011.9</font></TD>
+<TD align="right" bgcolor="#FF8835"><font color="#000000">0.0</font></TD>
+<TD align="right"  bgcolor="#6060FF"><font color="#FFFFFF">1.9</font></TD>
+<TD align="right"  bgcolor="#9090FF"><font color="#FFFFFF">2.3</font></TD>
+<TD align="right"  bgcolor="#FFFF90"><font color="#000000">11.6</font></TD>
+<TD align="right"  bgcolor="#6060FF"><font color="#FFFFFF">17.1</font></TD>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_nuboso.png" alt="sw_nuboso.png" onmouseover=" overlib('Broken. Daylight. At 08/07/2020 09:00 UTC (H - 21)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_nuboso.png" alt="sw_nuboso.png" onmouseover=" overlib('Broken. Daylight. At 08/07/2020 12:00 UTC (H - 18)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_lunanub.png" alt="sw_lunanub.png" onmouseover=" overlib('Broken. Dawn. At 08/07/2020 15:00 UTC (H - 15)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_lunanub.png" alt="sw_lunanub.png" onmouseover=" overlib('Broken. Night. At 08/07/2020 18:00 UTC (H - 12)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_lunanub.png" alt="sw_lunanub.png" onmouseover=" overlib('Broken. Night. At 08/07/2020 21:00 UTC (H - 09)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_sol.png" alt="sw_sol.png" onmouseover=" overlib('Sky clear. Daylight. At 08/08/2020 00:00 UTC (H - 06)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_sol.png" alt="sw_sol.png" onmouseover=" overlib('Sky clear. Daylight. At 08/08/2020 03:00 UTC (H - 03)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_sol.png" alt="sw_sol.png" onmouseover=" overlib('Sky clear. Daylight. At 08/08/2020 06:00 UTC (H - 00)'); " onmouseout=" return nd();">
+</td>
+</TR>
+<TR>
+<TD bgcolor="#a0c0a0"><a HREF="/cgi-bin/gsynres?ind=28698&lang=en&decoded=yes&ndays=2&ano=2020&mes=08&day=07&hora=06" onmouseover="return overlib('Decoded synops since 48 before 08/07/2020 06 UTC');" onmouseout=" return nd();">08/07</a></TD>
+<TD align="right" bgcolor="#FF002D"><font color="#FFFFFF">33.0</font></TD>
+<TD align="right" bgcolor="#ECEB3C"><font color="#000000">16.8</font></TD>
+<TD align="right"  bgcolor="#FFB339"><font color="#000000">25.5</font></TD>
+<TD align="right"  bgcolor="#D5FF3C"><font color="#000000">15.7</font></TD>
+<TD align="right"  bgcolor="#D5FF3C"><font color="#000000">59.0</font></TD>
+<TD align="center"  bgcolor="#a0a0c0"><font color="#000000">N</font></TD>
+<TD align="right"  bgcolor="#A0FF47"><font color="#000000">5.4</font></TD>
+<TD align="right" bgcolor="#DDDDDD">----</TD>
+<TD align="right"  bgcolor="#D5FF3C"><font color="#000000">1015.5</font></TD>
+<TD align="right" bgcolor="#FF8835"><font color="#000000">0.0</font></TD>
+<TD align="right"  bgcolor="#9090FF"><font color="#FFFFFF">2.2</font></TD>
+<TD align="right"  bgcolor="#9090FF"><font color="#FFFFFF">2.3</font></TD>
+<TD align="right"  bgcolor="#FFFF50"><font color="#000000">14.0</font></TD>
+<TD align="right"  bgcolor="#6060FF"><font color="#FFFFFF">17.5</font></TD>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_nuboso.png" alt="sw_nuboso.png" onmouseover=" overlib('Broken. Daylight. At 08/06/2020 09:00 UTC (H - 21)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_nuboso.png" alt="sw_nuboso.png" onmouseover=" overlib('Broken. Daylight. At 08/06/2020 12:00 UTC (H - 18)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_cb_noche.png" alt="sw_cb_noche.png" onmouseover=" overlib('Cumulonimbus. Dawn. At 08/06/2020 15:00 UTC (H - 15)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_luna.png" alt="sw_luna.png" onmouseover=" overlib('Sky clear. Night. At 08/06/2020 18:00 UTC (H - 12)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_luna.png" alt="sw_luna.png" onmouseover=" overlib('Sky clear. Night. At 08/06/2020 21:00 UTC (H - 09)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_nuboso.png" alt="sw_nuboso.png" onmouseover=" overlib('Broken. Daylight. At 08/07/2020 00:00 UTC (H - 06)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_sol.png" alt="sw_sol.png" onmouseover=" overlib('Sky clear. Daylight. At 08/07/2020 03:00 UTC (H - 03)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_cubierto.png" alt="sw_cubierto.png" onmouseover=" overlib('Overcast. Daylight. At 08/07/2020 06:00 UTC (H - 00)'); " onmouseout=" return nd();">
+</td>
+</TR>
+<TR>
+<TD bgcolor="#a0c0a0"><a HREF="/cgi-bin/gsynres?ind=28698&lang=en&decoded=yes&ndays=2&ano=2020&mes=08&day=06&hora=06" onmouseover="return overlib('Decoded synops since 48 before 08/06/2020 06 UTC');" onmouseout=" return nd();">08/06</a></TD>
+<TD align="right" bgcolor="#FF502F"><font color="#FFFFFF">30.4</font></TD>
+<TD align="right" bgcolor="#D5FF3C"><font color="#000000">13.2</font></TD>
+<TD align="right"  bgcolor="#FFB339"><font color="#000000">23.0</font></TD>
+<TD align="right"  bgcolor="#69FF60"><font color="#000000">8.8</font></TD>
+<TD align="right"  bgcolor="#FFCD3C"><font color="#000000">48.6</font></TD>
+<TD align="center"  bgcolor="#a0a0c0"><font color="#000000">NNE</font></TD>
+<TD align="right"  bgcolor="#A0FF47"><font color="#000000">6.8</font></TD>
+<TD align="right"  bgcolor="#0AFFBE"><font color="#000000">39.6</font></TD>
+<TD align="right"  bgcolor="#A0FF47"><font color="#000000">1017.3</font></TD>
+<TD align="right" bgcolor="#FF8835"><font color="#000000">0.0</font></TD>
+<TD align="right"  bgcolor="#6060FF"><font color="#FFFFFF">0.5</font></TD>
+<TD align="right"  bgcolor="#6060FF"><font color="#FFFFFF">0.5</font></TD>
+<TD align="right"  bgcolor="#FFFF50"><font color="#000000">14.5</font></TD>
+<TD align="right"  bgcolor="#6060FF"><font color="#FFFFFF">15.5</font></TD>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_sol.png" alt="sw_sol.png" onmouseover=" overlib('Sky clear. Daylight. At 08/05/2020 09:00 UTC (H - 21)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_sol.png" alt="sw_sol.png" onmouseover=" overlib('Sky clear. Daylight. At 08/05/2020 12:00 UTC (H - 18)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_sol.png" alt="sw_sol.png" onmouseover=" overlib('Sky clear. Daylight. At 08/05/2020 15:00 UTC (H - 15)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_luna.png" alt="sw_luna.png" onmouseover=" overlib('Sky clear. Night. At 08/05/2020 18:00 UTC (H - 12)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_luna.png" alt="sw_luna.png" onmouseover=" overlib('Sky clear. Night. At 08/05/2020 21:00 UTC (H - 09)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_sol.png" alt="sw_sol.png" onmouseover=" overlib('Sky clear. Daylight. At 08/06/2020 00:00 UTC (H - 06)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_sol.png" alt="sw_sol.png" onmouseover=" overlib('Sky clear. Daylight. At 08/06/2020 03:00 UTC (H - 03)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_sol.png" alt="sw_sol.png" onmouseover=" overlib('Sky clear. Daylight. At 08/06/2020 06:00 UTC (H - 00)'); " onmouseout=" return nd();">
+</td>
+</TR>
+<TR>
+<TD bgcolor="#a0c0a0"><a HREF="/cgi-bin/gsynres?ind=28698&lang=en&decoded=yes&ndays=2&ano=2020&mes=08&day=05&hora=06" onmouseover="return overlib('Decoded synops since 48 before 08/05/2020 06 UTC');" onmouseout=" return nd();">08/05</a></TD>
+<TD align="right" bgcolor="#FF502F"><font color="#FFFFFF">30.9</font></TD>
+<TD align="right" bgcolor="#D5FF3C"><font color="#000000">15.9</font></TD>
+<TD align="right"  bgcolor="#FFB339"><font color="#000000">24.6</font></TD>
+<TD align="right"  bgcolor="#A0FF47"><font color="#000000">12.6</font></TD>
+<TD align="right"  bgcolor="#FFCD3C"><font color="#000000">50.6</font></TD>
+<TD align="center"  bgcolor="#a0a0c0"><font color="#000000">ENE</font></TD>
+<TD align="right"  bgcolor="#A0FF47"><font color="#000000">11.7</font></TD>
+<TD align="right"  bgcolor="#0AFFBE"><font color="#000000">43.2</font></TD>
+<TD align="right"  bgcolor="#D5FF3C"><font color="#000000">1015.2</font></TD>
+<TD align="right" bgcolor="#FF8835"><font color="#000000">0.0</font></TD>
+<TD align="right"  bgcolor="#6060FF"><font color="#FFFFFF">0.4</font></TD>
+<TD align="right" bgcolor="#DDDDDD">---</TD>
+<TD align="right"  bgcolor="#FFFF50"><font color="#000000">14.4</font></TD>
+<TD align="right"  bgcolor="#6060FF"><font color="#FFFFFF">17.5</font></TD>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_nuboso.png" alt="sw_nuboso.png" onmouseover=" overlib('Broken. Daylight. At 08/04/2020 09:00 UTC (H - 21)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_sol.png" alt="sw_sol.png" onmouseover=" overlib('Sky clear. Daylight. At 08/04/2020 12:00 UTC (H - 18)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_sol.png" alt="sw_sol.png" onmouseover=" overlib('Sky clear. Daylight. At 08/04/2020 15:00 UTC (H - 15)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_luna.png" alt="sw_luna.png" onmouseover=" overlib('Sky clear. Night. At 08/04/2020 18:00 UTC (H - 12)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_luna.png" alt="sw_luna.png" onmouseover=" overlib('Sky clear. Night. At 08/04/2020 21:00 UTC (H - 09)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_sol.png" alt="sw_sol.png" onmouseover=" overlib('Sky clear. Daylight. At 08/05/2020 00:00 UTC (H - 06)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_sol.png" alt="sw_sol.png" onmouseover=" overlib('Sky clear. Daylight. At 08/05/2020 03:00 UTC (H - 03)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_sol.png" alt="sw_sol.png" onmouseover=" overlib('Sky clear. Daylight. At 08/05/2020 06:00 UTC (H - 00)'); " onmouseout=" return nd();">
+</td>
+</TR>
+<TR>
+<TD bgcolor="#a0c0a0"><a HREF="/cgi-bin/gsynres?ind=28698&lang=en&decoded=yes&ndays=2&ano=2020&mes=08&day=04&hora=06" onmouseover="return overlib('Decoded synops since 48 before 08/04/2020 06 UTC');" onmouseout=" return nd();">08/04</a></TD>
+<TD align="right" bgcolor="#FF002D"><font color="#FFFFFF">34.5</font></TD>
+<TD align="right" bgcolor="#D5FF3C"><font color="#000000">14.7</font></TD>
+<TD align="right"  bgcolor="#FF8835"><font color="#000000">26.0</font></TD>
+<TD align="right"  bgcolor="#D5FF3C"><font color="#000000">13.9</font></TD>
+<TD align="right"  bgcolor="#ECEB3C"><font color="#000000">53.8</font></TD>
+<TD align="center"  bgcolor="#a0a0c0"><font color="#000000">NE</font></TD>
+<TD align="right"  bgcolor="#A0FF47"><font color="#000000">10.4</font></TD>
+<TD align="right"  bgcolor="#0AFFBE"><font color="#000000">39.6</font></TD>
+<TD align="right"  bgcolor="#D5FF3C"><font color="#000000">1015.7</font></TD>
+<TD align="right" bgcolor="#FF8835"><font color="#000000">0.0</font></TD>
+<TD align="right"  bgcolor="#6060FF"><font color="#FFFFFF">2.0</font></TD>
+<TD align="right"  bgcolor="#6060FF"><font color="#FFFFFF">0.4</font></TD>
+<TD align="right"  bgcolor="#FFFF50"><font color="#000000">14.5</font></TD>
+<TD align="right"  bgcolor="#6060FF"><font color="#FFFFFF">17.5</font></TD>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_sol.png" alt="sw_sol.png" onmouseover=" overlib('Sky clear. Daylight. At 08/03/2020 09:00 UTC (H - 21)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_sol.png" alt="sw_sol.png" onmouseover=" overlib('Sky clear. Daylight. At 08/03/2020 12:00 UTC (H - 18)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_nuboso.png" alt="sw_nuboso.png" onmouseover=" overlib('Broken. Daylight. At 08/03/2020 15:00 UTC (H - 15)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_lunanub.png" alt="sw_lunanub.png" onmouseover=" overlib('Broken. Night. At 08/03/2020 18:00 UTC (H - 12)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_lunanub.png" alt="sw_lunanub.png" onmouseover=" overlib('Broken. Night. At 08/03/2020 21:00 UTC (H - 09)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_nuboso.png" alt="sw_nuboso.png" onmouseover=" overlib('Broken. Daylight. At 08/04/2020 00:00 UTC (H - 06)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_sol.png" alt="sw_sol.png" onmouseover=" overlib('Sky clear. Daylight. At 08/04/2020 03:00 UTC (H - 03)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_nuboso.png" alt="sw_nuboso.png" onmouseover=" overlib('Broken. Daylight. At 08/04/2020 06:00 UTC (H - 00)'); " onmouseout=" return nd();">
+</td>
+</TR>
+<TR>
+<TD bgcolor="#a0c0a0"><a HREF="/cgi-bin/gsynres?ind=28698&lang=en&decoded=yes&ndays=2&ano=2020&mes=08&day=03&hora=06" onmouseover="return overlib('Decoded synops since 48 before 08/03/2020 06 UTC');" onmouseout=" return nd();">08/03</a></TD>
+<TD align="right" bgcolor="#FF0028"><font color="#FFFFFF">36.7</font></TD>
+<TD align="right" bgcolor="#D5FF3C"><font color="#000000">16.0</font></TD>
+<TD align="right"  bgcolor="#FF8835"><font color="#000000">27.0</font></TD>
+<TD align="right"  bgcolor="#D5FF3C"><font color="#000000">13.2</font></TD>
+<TD align="right"  bgcolor="#FFCD3C"><font color="#000000">48.2</font></TD>
+<TD align="center"  bgcolor="#a0a0c0"><font color="#000000">NE</font></TD>
+<TD align="right"  bgcolor="#A0FF47"><font color="#000000">6.3</font></TD>
+<TD align="right" bgcolor="#DDDDDD">----</TD>
+<TD align="right"  bgcolor="#A0FF47"><font color="#000000">1016.8</font></TD>
+<TD align="right" bgcolor="#FF8835"><font color="#000000">0.0</font></TD>
+<TD align="right"  bgcolor="#6060FF"><font color="#FFFFFF">1.2</font></TD>
+<TD align="right"  bgcolor="#6060FF"><font color="#FFFFFF">1.7</font></TD>
+<TD align="right"  bgcolor="#FFFF50"><font color="#000000">14.0</font></TD>
+<TD align="right"  bgcolor="#6060FF"><font color="#FFFFFF">15.9</font></TD>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_nuboso.png" alt="sw_nuboso.png" onmouseover=" overlib('Broken. Daylight. At 08/02/2020 09:00 UTC (H - 21)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_cubierto.png" alt="sw_cubierto.png" onmouseover=" overlib('Overcast. Daylight. At 08/02/2020 12:00 UTC (H - 18)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_sol.png" alt="sw_sol.png" onmouseover=" overlib('Sky clear. Daylight. At 08/02/2020 15:00 UTC (H - 15)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_luna.png" alt="sw_luna.png" onmouseover=" overlib('Sky clear. Night. At 08/02/2020 18:00 UTC (H - 12)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_luna.png" alt="sw_luna.png" onmouseover=" overlib('Sky clear. Night. At 08/02/2020 21:00 UTC (H - 09)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_bruma.png" alt="sw_bruma.png" onmouseover=" overlib('Mist. Daylight. At 08/03/2020 00:00 UTC (H - 06)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_sol.png" alt="sw_sol.png" onmouseover=" overlib('Sky clear. Daylight. At 08/03/2020 03:00 UTC (H - 03)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_sol.png" alt="sw_sol.png" onmouseover=" overlib('Sky clear. Daylight. At 08/03/2020 06:00 UTC (H - 00)'); " onmouseout=" return nd();">
+</td>
+</TR>
+<TR>
+<TD bgcolor="#a0c0a0"><a HREF="/cgi-bin/gsynres?ind=28698&lang=en&decoded=yes&ndays=2&ano=2020&mes=08&day=02&hora=06" onmouseover="return overlib('Decoded synops since 48 before 08/02/2020 06 UTC');" onmouseout=" return nd();">08/02</a></TD>
+<TD align="right" bgcolor="#FF002D"><font color="#FFFFFF">34.0</font></TD>
+<TD align="right" bgcolor="#D5FF3C"><font color="#000000">15.8</font></TD>
+<TD align="right"  bgcolor="#FF8835"><font color="#000000">25.8</font></TD>
+<TD align="right"  bgcolor="#D5FF3C"><font color="#000000">13.1</font></TD>
+<TD align="right"  bgcolor="#FFCD3C"><font color="#000000">50.9</font></TD>
+<TD align="center"  bgcolor="#a0a0c0"><font color="#000000">WSW</font></TD>
+<TD align="right"  bgcolor="#D5FF3C"><font color="#000000">4.1</font></TD>
+<TD align="right" bgcolor="#DDDDDD">----</TD>
+<TD align="right"  bgcolor="#D5FF3C"><font color="#000000">1013.6</font></TD>
+<TD align="right" bgcolor="#FF8835"><font color="#000000">0.0</font></TD>
+<TD align="right"  bgcolor="#6060FF"><font color="#FFFFFF">1.4</font></TD>
+<TD align="right"  bgcolor="#6060FF"><font color="#FFFFFF">0.8</font></TD>
+<TD align="right"  bgcolor="#FFFF50"><font color="#000000">14.2</font></TD>
+<TD align="right"  bgcolor="#6060FF"><font color="#FFFFFF">15.5</font></TD>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_nuboso.png" alt="sw_nuboso.png" onmouseover=" overlib('Broken. Daylight. At 08/01/2020 09:00 UTC (H - 21)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_sol.png" alt="sw_sol.png" onmouseover=" overlib('Sky clear. Daylight. At 08/01/2020 12:00 UTC (H - 18)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_nuboso.png" alt="sw_nuboso.png" onmouseover=" overlib('Broken. Daylight. At 08/01/2020 15:00 UTC (H - 15)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_lunanub.png" alt="sw_lunanub.png" onmouseover=" overlib('Broken. Night. At 08/01/2020 18:00 UTC (H - 12)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_lunanub.png" alt="sw_lunanub.png" onmouseover=" overlib('Broken. Night. At 08/01/2020 21:00 UTC (H - 09)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_bruma.png" alt="sw_bruma.png" onmouseover=" overlib('Mist. Daylight. At 08/02/2020 00:00 UTC (H - 06)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_humo.png" alt="sw_humo.png" onmouseover=" overlib('Smoke. Daylight. At 08/02/2020 03:00 UTC (H - 03)'); " onmouseout=" return nd();">
+</td>
+<td bgcolor="#4040FF">
+<img src="/sigw/sw_nuboso.png" alt="sw_nuboso.png" onmouseover=" overlib('Broken. Daylight. At 08/02/2020 06:00 UTC (H - 00)'); " onmouseout=" return nd();">
+</td>
+</TR>
+</TABLE>
+<!--comienzo del epilogo-->
+</TD>
+</TR>
+<TR>
+  <TD  align="center" colspan="3" bgcolor="#FFFFDD">
+<!-- barra inferior -->
+<DIV><font color="#FF6666"><b>DISCLAIMER:</b> The information in these pages must be taken as merely informative. The authors are not responsible about errors, delays or failures in the data or when interpreting the data. No any critical mission should use this data.</font></DIV>
+<DIV><font color="#FF6666">This site do not store any personal data from users except the cookie consent status, but uses publicity cookies from Google Adsense. You can visit <a href="https://policies.google.com/technologies/partner-sites">this paage on Google</a> to see the details</font><DIV>
+<FONT color="#902020">&#169; Copyright G. Ballester Valor  2005-2021</font></DIV>.
+<!-- fin de barra inferior -->
+  </TD>
+</TR>
+</table>
+<!-- fin del epilogo-->
+</BODY>
+</HTML>

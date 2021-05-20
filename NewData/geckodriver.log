@@ -1,0 +1,63 @@
+1616870722760	geckodriver	INFO	Listening on 127.0.0.1:11240
+1616870726779	mozrunner::runner	INFO	Running command: "C:/Program Files/Firefox Nightly/firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\Dima\\AppData\\Local\\Temp\\rust_mozprofileHMllUZ"
+1616870727446	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1616870731722	Marionette	INFO	Listening on port 11248
+1616870732099	Marionette	WARN	TLS certificate errors will be ignored for this session
+[Parent 10444, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+1616870845983	Marionette	INFO	Stopped listening on port 11248
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+894	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1616870739396	Marionette	INFO	Listening on port 11297
+1616870739639	Marionette	WARN	TLS certificate errors will be ignored for this session
+1616870800411	Marionette	INFO	Stopped listening on port 11297
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\Dima\\AppData\\Local\\Temp\\rust_mozprofileNSW6Zn"
+1616870816584	geckodriver	INFO	Listening on 127.0.0.1:11387
+1616870820030	mozrunner::runner	INFO	Running command: "C:/Program Files/Firefox Nightly/firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\Dima\\AppData\\Local\\Temp\\rust_mozprofileliaNyU"
+1616870821781	Marionette	INFO	Marionette enabled
+console.warn: "[fluent] Missing translations in ru: menu-tools-addons-and-themes, menu-tools-browser-tools, menu-tools-task-manager, menu-help-enter-troubleshoot-mode2."
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Dima\\AppData\\Local\\Temp\\rust_mozprofileliaNyU\\search.json.mozlz4", (void 0)))
+1616870829497	Marionette	INFO	Listening on port 11395
+1616870829625	Marionette	WARN	TLS certificate errors will be ignored for this session
+1616870834242	Marionette	INFO	Stopped listening on port 11395
+[Child 13344, IPC I/O Child] WARNING: pipe error: 232: file /builds/worker/checkouts/gecko/ipc/chromium/src/chrome/common/ipc_channel_win.cc:544
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+[Parent 18088, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1616870840616	geckodriver	INFO	Listening on 127.0.0.1:11450
+1616870843637	mozrunner::runner	INFO	Running command: "C:/Program Files/Firefox Nightly/firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\Dima\\AppData\\Local\\Temp\\rust_mozprofilec9cNqe"
+1616870844587	Marionette	INFO	Marionette enabled
+console.warn: "[fluent] Missing translations in ru: menu-tools-addons-and-themes, menu-tools-browser-tools, menu-tools-task-manager, menu-help-enter-troubleshoot-mode2."
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Dima\\AppData\\Local\\Temp\\rust_mozprofilec9cNqe\\search.json.mozlz4", (void 0)))
+1616870849681	Marionette	INFO	Listening on port 11458
+1616870849941	Marionette	WARN	TLS certificate errors will be ignored for this session
+1616870854531	Marionette	INFO	Stopped listening on port 11458
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1616870962226	geckodriver	INFO	Listening on 127.0.0.1:11502
+1616870987674	geckodriver	INFO	Listening on 127.0.0.1:11512
+1616870990688	mozrunner::runner	INFO	Running command: "C:/Program Files/Firefox Nightly/firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\Dima\\AppData\\Local\\Temp\\rust_mozprofile6ExVvT"
+1616870991282	Marionette	INFO	Marionette enabled
+console.warn: "[fluent] Missing translations in ru: menu-tools-addons-and-themes, menu-tools-browser-tools, menu-tools-task-manager, menu-help-enter-troubleshoot-mode2."
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Dima\\AppData\\Local\\Temp\\rust_mozprofile6ExVvT\\search.json.mozlz4", (void 0)))
+1616870994657	Marionette	INFO	Listening on port 11520
+1616870995177	Marionette	WARN	TLS certificate errors will be ignored for this session
+console.warn: "[fluent] Missing translations in ru: tab-context-open-in-new-container-tab."
+1616871050774	Marionette	INFO	Stopped listening on port 11520
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
