@@ -6,3 +6,4 @@ triangle_ogimet/data
 *.csv
 .idea
 RP5/data
+__pycache__
