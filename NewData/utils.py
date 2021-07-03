@@ -1,10 +1,10 @@
-import warnings
-warnings.filterwarnings('ignore')
-warnings.simplefilter(action='ignore', category=FutureWarning)
 import os
 import pandas as pd
 import numpy as np
 import datetime
+import warnings
+warnings.filterwarnings('ignore')
+warnings.simplefilter(action='ignore', category=FutureWarning)
 
 
 # Script utils for clean and preprocess / label data

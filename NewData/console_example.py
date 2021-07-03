@@ -4,7 +4,6 @@ import matplotlib.pyplot as plt
 from os import environ
 import argparse
 import sys
-from utils import *
 from data_work import *
 
 
